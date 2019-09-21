@@ -7,8 +7,8 @@ import { Layout, Menu } from 'antd';
 
 import { Typography } from 'antd';
 import Logo from './media/logo.png'
+import Quote from './Quote'
 
-const { Title } = Typography;
 const { Header, Content, Footer } = Layout;
 
 
@@ -32,7 +32,7 @@ class Main extends Component {
       </Menu>
     </Header>
     <Content style={{ padding: '50px 50px', marginTop: 64 }}>
-      
+      <Quote/>
     </Content>
     <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Created by Asmaa Mirkhan</Footer>
   </Layout>
