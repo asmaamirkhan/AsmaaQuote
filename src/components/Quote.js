@@ -19,6 +19,7 @@ class Quote extends Component {
           />
           <Divider />
           <p style={{fontSize: 'large'}}>{this.props.quote}</p>
+          <Divider style={{fontSize: 'x-small'}} >{this.props.author}</Divider>          
         </Card>
       
     );
