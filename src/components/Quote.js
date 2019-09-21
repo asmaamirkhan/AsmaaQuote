@@ -11,14 +11,14 @@ class Quote extends Component {
       
         <Card style={{ width: 300, marginTop: 16 }}  >
           <Meta
-            title="Ship in harbor 🎈"
+            title={this.props.title}
             avatar={
               <FaRegStar size='3em' color='#1890FF' />
             }
-            description="Motivation"
+            description={this.props.category}
           />
           <Divider />
-          <p class = 'qoute' style={{fontSize: 'large'}}>A ship in harbor is safe, but that is not what ships are built for.</p>
+          <p style={{fontSize: 'large'}}>{this.props.quote}</p>
         </Card>
       
     );
