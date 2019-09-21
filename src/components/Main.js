@@ -3,16 +3,28 @@ import React, { Component } from 'react';
 
 import 'antd/dist/antd.css';
 import '../styles/style.css';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Row, Col } from 'antd';
 
-import { Typography } from 'antd';
 import Logo from './media/logo.png'
 import Quote from './Quote'
+import quoteList from './data/quotes'
 
 const { Header, Content, Footer } = Layout;
 
 
 class Main extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      quotes: []
+    }
+  }
+
+  componentDidMount() {
+    console.log(quoteList)
+  }
+
   render() {
     return (
       <div>
@@ -33,10 +45,24 @@ class Main extends Component {
               <Menu.Item key="3">About</Menu.Item>
             </Menu>
           </Header>
-          <Content style={{ padding: '50px 50px', marginTop: 64 }}>
-            <Quote title='ship' category='mot' quote='hi hi' author='Asmaa' />
+          <Content style={{ padding: '50px 25px', marginTop: 64 }}>
+            <Row>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6}  >
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+            </Row>
+            
           </Content>
-          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Created by Asmaa Mirkhan</Footer>
+          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Created by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
         </Layout>
       </div>
     );
