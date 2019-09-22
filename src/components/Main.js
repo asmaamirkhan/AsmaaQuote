@@ -22,7 +22,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    console.log(quoteList)
+    this.setState({ quotes: quoteList });
   }
 
   render() {
@@ -47,27 +47,18 @@ class Main extends Component {
           </Header>
           <Content style={{ padding: '50px 25px', marginTop: 64 }}>
             <Row gutter={10} type='flex'>
-              
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}} >
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
-                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships areA ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
-              </Col>
+
+              {
+                this.state.quotes.map((item, key) => {
+                  return (
+                    <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
+                      <Quote title={item.title} category={item.category} quote={item.content} author={item.author} />
+                    </Col>
+                  )
+                })
+              }
             </Row>
-            
+
           </Content>
           <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Created by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
         </Layout>
