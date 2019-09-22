@@ -3,27 +3,17 @@ import React, { Component } from 'react';
 
 import 'antd/dist/antd.css';
 import '../styles/style.css';
-import { Layout, Menu, Row, Col } from 'antd';
+import { Layout, Menu } from 'antd';
 
 import Logo from './media/logo.png'
-import Quote from './Quote'
-import quoteList from './data/quotes'
+import PageContent from './PageContent';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Footer } = Layout;
 
 
 class Main extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      quotes: []
-    }
-  }
 
-  componentDidMount() {
-    this.setState({ quotes: quoteList });
-  }
 
   render() {
     return (
@@ -40,27 +30,16 @@ class Main extends Component {
               defaultSelectedKeys={['1']}
               style={{ lineHeight: '64px', float: "right" }}
             >
-              <Menu.Item key="1">Main</Menu.Item>
-              <Menu.Item key="2">Other</Menu.Item>
-              <Menu.Item key="3">About</Menu.Item>
+              <Menu.Item key="1">Motivation</Menu.Item>
+              <Menu.Item key="2">Life</Menu.Item>
+              <Menu.Item key="3">MyQurotes</Menu.Item>
+              <Menu.Item key="4">About</Menu.Item>
             </Menu>
           </Header>
-          <Content style={{ padding: '50px 25px', marginTop: 64 }}>
-            <Row gutter={10} type='flex'>
 
-              {
-                this.state.quotes.map((item, key) => {
-                  return (
-                    <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
-                      <Quote title={item.title} category={item.category} quote={item.content} author={item.author} />
-                    </Col>
-                  )
-                })
-              }
-            </Row>
+          <PageContent />
 
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Created by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
+          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
         </Layout>
       </div>
     );
