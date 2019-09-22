@@ -46,18 +46,25 @@ class Main extends Component {
             </Menu>
           </Header>
           <Content style={{ padding: '50px 25px', marginTop: 64 }}>
-            <Row>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6}  >
+            <Row gutter={10} type='flex'>
+              
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}} >
                 <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
                 <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
                 <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={8} xl={6}>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
                 <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
+              </Col>
+              <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{marginTop: 16}}>
+                <Quote title='Ship in harbor 🎈' category='Motivation' quote='A ship in harbor is safe, but that is not what ships areA ship in harbor is safe, but that is not what ships are built for.' author='Asmaa' />
               </Col>
             </Row>
             

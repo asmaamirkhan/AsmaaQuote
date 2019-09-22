@@ -9,7 +9,7 @@ class Quote extends Component {
   render() {
     return (
       
-        <Card style={{  marginTop: 16 }}  >
+        <Card style={{   height:'100%' }}  >
           <Meta
             title={this.props.title}
             avatar={
