@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col } from 'antd';
 import Quote from './Quote';
+import { withRouter } from 'react-router'
 const { Content } = Layout;
 class PageContent extends Component {
 
@@ -16,32 +17,56 @@ class PageContent extends Component {
       path: (this.props.category).toLowerCase(),
       categories: require('./data/categories')
     }
-    console.log(this.state)
+
   }
 
-  componentDidMount(){
-    
-    if(this.state.categories.indexOf(this.state.category)>=0 || this.state.category==''){
-      if(this.state.category){
-        this.setState({quotes: require('./data/'.concat(this.state.path))});
+  componentWillUpdate() {
+    console.log('new')
 
-      }else{
-        this.setState({quotes: require('./data/motivation')});
-        
+
+  }
+
+  componentDidMount() {
+
+    this.props.history.listen((location, action) => {
+      this.setState({
+        path: this.props.history.location.pathname.replace('/', '').toLowerCase(),
+        category: this.props.history.location.pathname.replace('/', '')
+      }, () => {
+        if (this.state.categories.indexOf(this.state.category) >= 0 || this.state.category == '') {
+          if (this.state.category) {
+            this.setState({ quotes: require('./data/'.concat(this.state.path)) });
+
+          } else {
+            this.setState({ quotes: require('./data/motivation') });
+
+          }
+        }
+        else {
+          this.props.history.push('/');
+        }
+      })
+
+
+    });
+    if (this.state.categories.indexOf(this.state.category) >= 0 || this.state.category == '') {
+      if (this.state.category) {
+        this.setState({ quotes: require('./data/'.concat(this.state.path)) });
+
+      } else {
+        this.setState({ quotes: require('./data/motivation') });
+
       }
     }
-    else{
-      document.location = '/'
-    } 
+    else {
+      this.props.history.push('/');
+      //document.location = '/'
+    }
+
   }
 
   render() {
-
-    
-  
-
     return (
-
       <Content style={{ padding: '50px 25px', marginTop: 64 }}>
         <Row gutter={10} type='flex'>
 
@@ -62,4 +87,4 @@ class PageContent extends Component {
   }
 }
 
-export default PageContent;
+export default withRouter(PageContent);

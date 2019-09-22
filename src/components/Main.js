@@ -8,6 +8,7 @@ import { Layout, Menu } from 'antd';
 
 import Logo from './media/logo.png'
 import PageContent from './PageContent';
+import { NavLink, Link, Redirect } from "react-router-dom";
 
 const { Header, Footer } = Layout;
 
@@ -18,14 +19,19 @@ class Main extends Component {
     super(props);
     this.state = {
       quotes: [],
-      category:  this.props.location.pathname.replace('/','')
+      categoryi:  this.props.location.pathname.replace('/',''),
+      category:  this.props.history.location.pathname.replace('/','')
     }
+    
   }
 
   componentDidMount(){
     console.log(this.state)
 
   }
+
+  
+  
 
   render() {
     return (
@@ -42,10 +48,10 @@ class Main extends Component {
               defaultSelectedKeys={['1']}
               style={{ lineHeight: '64px', float: "right" }}
             >
-              <Menu.Item key="1">Motivation</Menu.Item>
-              <Menu.Item key="2">Life</Menu.Item>
-              <Menu.Item key="3">MyQurotes</Menu.Item>
-              <Menu.Item key="4">About</Menu.Item>
+              <Menu.Item key="1"><NavLink to={'/Motivation'}>Motivation</NavLink></Menu.Item>
+              <Menu.Item key="2"><NavLink to={'/Life'}>Life</NavLink></Menu.Item>
+              <Menu.Item key="3"><NavLink to={'/MyQuotes'}>MyQuotes</NavLink></Menu.Item>
+              <Menu.Item key="4"><NavLink to={'/About'}>About</NavLink></Menu.Item>
             </Menu>
           </Header>
 
