@@ -1,10 +1,19 @@
+/*
+ author: Asmaa Mirkhan ~ 2019
+*/
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+
 import React from 'react';
 import Main from './components/Main'
 
 function App() {
   return (
     <div>
-      <Main/>
+      <BrowserRouter>
+          <Switch>
+            <Route path="/" component={Main} />
+          </Switch>
+        </BrowserRouter>
     </div>
   );
 }

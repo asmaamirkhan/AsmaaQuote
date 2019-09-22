@@ -1,26 +1,45 @@
-// author: Asmaa Mirkhan ~ 2019
+/*
+  author: Asmaa Mirkhan ~ 2019
+*/
 import React, { Component } from 'react';
-
 import { Layout, Row, Col } from 'antd';
-import quoteList from './data/quotes';
-
-import Quote from './Quote'
-
+import Quote from './Quote';
 const { Content } = Layout;
 class PageContent extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      quotes: []
+      redirect: false,
+      quotes: [],
+      category: this.props.category,
+      path: (this.props.category).toLowerCase(),
+      categories: require('./data/categories')
     }
+    console.log(this.state)
   }
 
-  componentDidMount() {
-    this.setState({ quotes: quoteList });
+  componentDidMount(){
+    
+    if(this.state.categories.indexOf(this.state.category)>=0 || this.state.category==''){
+      if(this.state.category){
+        this.setState({quotes: require('./data/'.concat(this.state.path))});
+
+      }else{
+        this.setState({quotes: require('./data/motivation')});
+        
+      }
+    }
+    else{
+      document.location = '/'
+    } 
   }
 
   render() {
+
+    
+  
+
     return (
 
       <Content style={{ padding: '50px 25px', marginTop: 64 }}>

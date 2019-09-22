@@ -1,4 +1,5 @@
 // author: Asmaa Mirkhan ~ 2019
+
 import React, { Component } from 'react';
 
 import 'antd/dist/antd.css';
@@ -13,7 +14,18 @@ const { Header, Footer } = Layout;
 
 class Main extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      quotes: [],
+      category:  this.props.location.pathname.replace('/','')
+    }
+  }
 
+  componentDidMount(){
+    console.log(this.state)
+
+  }
 
   render() {
     return (
@@ -37,12 +49,13 @@ class Main extends Component {
             </Menu>
           </Header>
 
-          <PageContent />
+          <PageContent category={this.state.category} />
 
           <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
         </Layout>
       </div>
     );
+
   }
 }
 
