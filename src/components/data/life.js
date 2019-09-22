@@ -1,43 +1,43 @@
 module.exports = [
   {
-    title: "Ship in harbor 🎈",
+    title: "Being pushed ❣",
     category: "Life",
-    content: "A ship in harbor is safe, but that is not what ships are built for.",
+    content: "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart",
     author: "Asmaa"
   }, {
-    title: "Comfort Zone 🐾",
+    title: "Control vs Energy 🔥",
     category: "Life",
-    content: "Great things never come from comfort zones.",
+    content: "Instead of worrying about what you cannot control, shift your energy to what you can create",
     author: "Asmaa"
   },
   {
-    title: "Push yourself",
+    title: "Comfort Zone 🦋",
     category: "Life",
-    content: "Push yourself, because no one else is going to do it for you.",
+    content: "It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform.",
     author: "Asmaa"
   },
   {
-    title: "Search 🔍",
+    title: "Self happiness 💌",
     category: "Life",
-    content: "Success doesn’t just find you. You have to go out and get it.",
+    content: "Take responsibility of your own happiness, never put it in other people’s hands.",
     author: "Asmaa"
   },
   {
-    title: "Hard work ✨",
+    title: "Someone's smile 🎶",
     category: "Life",
-    content: "The harder you work for something, the greater you’ll feel when you achieve it.",
+    content: "Be the reason someone smiles. Be the reason someone feels loved and believes in the goodness in people",
     author: "Asmaa"
   },
   {
-    title: "Don't stop 🚀",
+    title: "Self Love 🥰",
     category: "Life",
-    content: "Don’t stop when you’re tired. Stop when you’re done.",
+    content: "Accept yourself, love yourself, and keep moving forward. If you want to fly, you have to give up what weighs you down.",
     author: "Asmaa"
   },
   {
-    title: "Believe in yourself ❤",
+    title: "Your Inner Voice 🎶",
     category: "Life",
-    content: "Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.",
+    content: "Follow your heart, listen to your inner voice, stop caring about what others think.",
     author: "Asmaa"
   }
 ];

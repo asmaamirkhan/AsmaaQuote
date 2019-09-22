@@ -70,11 +70,11 @@ class PageContent extends Component {
 
   render() {
     return (
-      <Content style={{ padding: '50px 25px', marginTop: 64 }}>
+      <Content style={{ padding: '20px 25px', marginTop: 64 }}>
         <BackTop>
           <FaArrowCircleUp size='3em' color='#1890FF' />  
         </BackTop>
-        <Row gutter={10} type='flex'>
+        <Row gutter={12} type='flex'>
 
           {
             this.state.quotes.map((item, key) => {
