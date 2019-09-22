@@ -1,4 +1,6 @@
-// author: Asmaa Mirkhan ~ 2019
+/*
+  author: Asmaa Mirkhan ~ 2019
+*/
 import React, { Component } from 'react';
 import { FaRegStar } from "react-icons/fa";
 import { Card,Divider, Tag } from 'antd';

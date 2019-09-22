@@ -1,4 +1,22 @@
-.ant-card-meta-title{
-  white-space: unset !important;
-  font-size: large
+.ant-card-meta-title {
+    white-space: unset !important;
+    font-size: large
+}
+
+#mainmenu {
+    display: inline !important;
+}
+
+#togglemenu {
+    display: none !important;
+}
+
+@media screen and (max-width:900px),
+screen and (max-height:500px) {
+    #mainmenu {
+        display: none !important;
+    }
+    #togglemenu {
+        display: inline !important;
+    }
 }

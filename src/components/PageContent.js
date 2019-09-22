@@ -2,9 +2,12 @@
   author: Asmaa Mirkhan ~ 2019
 */
 import React, { Component } from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, BackTop } from 'antd';
 import Quote from './Quote';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
+import '../styles/style.css';
+import { FaArrowCircleUp } from "react-icons/fa";
+
 const { Content } = Layout;
 class PageContent extends Component {
 
@@ -68,6 +71,9 @@ class PageContent extends Component {
   render() {
     return (
       <Content style={{ padding: '50px 25px', marginTop: 64 }}>
+        <BackTop>
+          <FaArrowCircleUp size='3em' color='#1890FF' />  
+        </BackTop>
         <Row gutter={10} type='flex'>
 
           {
@@ -80,7 +86,7 @@ class PageContent extends Component {
             })
           }
         </Row>
-
+          
       </Content>
 
     );
