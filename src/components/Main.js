@@ -80,7 +80,7 @@ class Main extends Component {
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['1']}
+              defaultSelectedKeys={['0']}
               style={{ float: "right" }}
               id='togglemenu'
             >
