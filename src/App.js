@@ -5,6 +5,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import React from 'react';
 import Main from './components/Main';
+import About from './components/About';
 import Categories from './components/data/categories'; 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
                 )
               })
             }
-          
+          <Route exact path="/About" component={About} />
           <Route path="/" component={Main} />
 
           </Switch>
