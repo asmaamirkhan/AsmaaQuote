@@ -18,31 +18,35 @@ class PageContent extends Component {
       quotes: [],
       category: this.props.category,
       path: (this.props.category).toLowerCase(),
-      categories: require('./data/categories')
+      categories: require('./data/categories'),
+      titles: [],
+      icon: 'star'
     }
 
   }
 
   componentWillUpdate() {
-    console.log('new')
-
-
+    //console.log('new');
+    console.log(this.state.titles)
   }
 
   componentDidMount() {
+    this.setState({ titles: this.state.categories.map(value => value.title) })
+
 
     this.props.history.listen((location, action) => {
       this.setState({
         path: this.props.history.location.pathname.replace('/', '').toLowerCase(),
         category: this.props.history.location.pathname.replace('/', '')
       }, () => {
-        if (this.state.categories.indexOf(this.state.category) >= 0 || this.state.category == '') {
+        let index = this.state.titles.indexOf(this.state.category);
+        if (index >= 0 || this.state.category == '') {
           if (this.state.category) {
-            this.setState({ quotes: require('./data/'.concat(this.state.path)) });
+            this.setState({ quotes: require('./data/'.concat(this.state.path)), icon: this.state.categories[index].icon });
 
           } else {
-            this.setState({ quotes: require('./data/motivation') });
-
+            this.setState({ quotes: require('./data/motivation'), icon: 'FaRegStar' });
+            console.log(this.state)
           }
         }
         else {
@@ -52,7 +56,7 @@ class PageContent extends Component {
 
 
     });
-    if (this.state.categories.indexOf(this.state.category) >= 0 || this.state.category == '') {
+    if (this.state.titles.indexOf(this.state.category) >= 0 || this.state.category == '') {
       if (this.state.category) {
         this.setState({ quotes: require('./data/'.concat(this.state.path)) });
 
@@ -72,7 +76,7 @@ class PageContent extends Component {
     return (
       <Content style={{ padding: '20px 25px', marginTop: 64 }}>
         <BackTop>
-          <FaArrowCircleUp size='3em' color='#1890FF' />  
+          <FaArrowCircleUp size='3em' color='#1890FF' />
         </BackTop>
         <Row gutter={12} type='flex'>
 
@@ -80,13 +84,13 @@ class PageContent extends Component {
             this.state.quotes.map((item, key) => {
               return (
                 <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
-                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} />
+                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} icon={this.state.icon} />
                 </Col>
               )
             })
           }
         </Row>
-          
+
       </Content>
 
     );

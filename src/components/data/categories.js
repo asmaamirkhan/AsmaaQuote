@@ -1,3 +1,15 @@
 module.exports = [
-  'Motivation', 'Life', 'MyQuotes'
+  {
+    title: "Motivation",
+    icon: "star"
+  },
+  {
+    title: "Life",
+    icon: "heart"
+  },
+  {
+    title: "MyQuotes",
+    icon: "coffee"
+  }
 ];
+
