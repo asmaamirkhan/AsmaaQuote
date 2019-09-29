@@ -1,15 +1,21 @@
 module.exports = [
   {
     title: "Motivation",
-    icon: "star"
+    icon: "star",
+    color: "blue",
+    solidColor: "#1890FF"
   },
   {
     title: "Life",
-    icon: "heart"
+    icon: "heart",
+    color: "purple",
+    solidColor: "#c61aff"
   },
   {
     title: "MyQuotes",
-    icon: "coffee"
+    icon: "coffee",
+    color: "magenta",
+    solidColor: "#ff1a75"
   }
 ];
 

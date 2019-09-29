@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { Card,Divider, Tag, Icon} from 'antd';
 import '../styles/style.css';
+import Categories from './data/categories';
 const { Meta } = Card;
 
 class Quote extends Component {
@@ -11,16 +12,21 @@ class Quote extends Component {
     super(props);
     this.state = {
       colors: ['#f8ecf8', '#ecf8f6', '#faeeea', '#f3eafa', '#fafaea'],
-      icon:'heart'
+      icon:'heart',
+      category: Categories[this.props.categoryId]
     }
   }
 
   componentDidMount(){
-    console.log(this.state)
+    //console.log(this.props.categoryId)
+    //console.log(this.props)
+    //this.setState({category: Categories[this.props.categoryId]})
   }
 
   componentWillUpdate() {
+    
     console.log(this.props)
+    console.log(this.state)
   }
 
   render() {
@@ -31,9 +37,9 @@ class Quote extends Component {
           <Meta
             title={this.props.title}
             avatar={
-              <Icon type={this.props.icon} style={{fontSize: 45, color:'#1890FF' }}  />
+              <Icon type={Categories[this.props.categoryId].icon} style={{fontSize: 45, color: Categories[this.props.categoryId].solidColor }}  />
             }
-            description={<div><spam>Category: </spam><Tag color="blue">{this.props.category}</Tag></div>}
+            description={<div><spam>Category: </spam><Tag color={Categories[this.props.categoryId].color}>{Categories[this.props.categoryId].title}</Tag></div>}
           />
           
           <Divider />

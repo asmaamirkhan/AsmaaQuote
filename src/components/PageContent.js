@@ -7,7 +7,7 @@ import Quote from './Quote';
 import { withRouter } from 'react-router';
 import '../styles/style.css';
 import { FaArrowCircleUp } from "react-icons/fa";
-
+import Categories from './data/categories';
 const { Content } = Layout;
 class PageContent extends Component {
 
@@ -19,34 +19,31 @@ class PageContent extends Component {
       category: this.props.category,
       path: (this.props.category).toLowerCase(),
       categories: require('./data/categories'),
-      titles: [],
-      icon: 'star'
+      titles: Categories.map(value => value.title),
+      categoryId:0
     }
 
   }
 
-  componentWillUpdate() {
-    //console.log('new');
-    console.log(this.state.titles)
-  }
 
   componentDidMount() {
-    this.setState({ titles: this.state.categories.map(value => value.title) })
-
-
+    
+    
     this.props.history.listen((location, action) => {
       this.setState({
         path: this.props.history.location.pathname.replace('/', '').toLowerCase(),
         category: this.props.history.location.pathname.replace('/', '')
       }, () => {
         let index = this.state.titles.indexOf(this.state.category);
+        
+        
         if (index >= 0 || this.state.category == '') {
           if (this.state.category) {
-            this.setState({ quotes: require('./data/'.concat(this.state.path)), icon: this.state.categories[index].icon });
+            this.setState({ quotes: require('./data/'.concat(this.state.path)), categoryId: index });
 
           } else {
-            this.setState({ quotes: require('./data/motivation'), icon: 'FaRegStar' });
-            console.log(this.state)
+            this.setState({ quotes: require('./data/motivation'), category: 1 });
+            
           }
         }
         else {
@@ -56,18 +53,18 @@ class PageContent extends Component {
 
 
     });
-    if (this.state.titles.indexOf(this.state.category) >= 0 || this.state.category == '') {
+    let index = this.state.titles.indexOf(this.state.category);
+    if (index >= 0 || this.state.category == '') {
       if (this.state.category) {
-        this.setState({ quotes: require('./data/'.concat(this.state.path)) });
+        this.setState({ quotes: require('./data/'.concat(this.state.path)), categoryId: index });
 
       } else {
-        this.setState({ quotes: require('./data/motivation') });
+        this.setState({ quotes: require('./data/motivation'), categoryId:0 });
 
       }
     }
     else {
       this.props.history.push('/');
-      //document.location = '/'
     }
 
   }
@@ -84,7 +81,7 @@ class PageContent extends Component {
             this.state.quotes.map((item, key) => {
               return (
                 <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
-                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} icon={this.state.icon} />
+                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} categoryId={this.state.categoryId}/>
                 </Col>
               )
             })

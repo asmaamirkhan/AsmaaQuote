@@ -21,7 +21,6 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes: [],
       categoryi: this.props.location.pathname.replace('/', ''),
       category: this.props.history.location.pathname.replace('/', ''),
       visible: false
@@ -41,11 +40,14 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    //console.log(this.state)
+    //console.log(Categories)
 
   }
 
+componentDidUpdate(){
+  //console.log(this.state)
 
+}
 
 
   render() {
