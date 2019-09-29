@@ -60,7 +60,7 @@ class Main extends Component {
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['1']}
+              defaultSelectedKeys={['0']}
               style={{ lineHeight: '64px', float: "right" }}
               id='mainmenu'
             >
@@ -92,7 +92,7 @@ class Main extends Component {
 
 
             <Drawer
-              title="Basic Drawer"
+              title="Asmaa Quote"
               placement="top"
               closable={true}
               onClose={this.onClose}
