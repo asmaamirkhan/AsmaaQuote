@@ -11,6 +11,7 @@ import Logo from './media/logo.png'
 import PageContent from './PageContent';
 import { NavLink, Link } from "react-router-dom";
 import { FaAlignJustify } from "react-icons/fa";
+import Categories from './data/categories';
 
 const { Header, Footer } = Layout;
 
@@ -63,23 +64,29 @@ class Main extends Component {
               style={{ lineHeight: '64px', float: "right" }}
               id='mainmenu'
             >
-              <Menu.Item key="1"><NavLink to={'/Motivation'}>Motivation</NavLink></Menu.Item>
-              <Menu.Item key="2"><NavLink to={'/Life'}>Life</NavLink></Menu.Item>
-              <Menu.Item key="3"><NavLink to={'/MyQuotes'}>MyQuotes</NavLink></Menu.Item>
-              <Menu.Item key="4"><NavLink to={'/About'}>About</NavLink></Menu.Item>
+              {
+                  Categories.map((item, key) => {
+                    let path = '/' + item.title;
+                    return (
+                      <Menu.Item key={key}><NavLink to={path}>{item.title}</NavLink></Menu.Item>
+                    )
+                  })
+                }
               
+              <Menu.Item ><NavLink to={'/About'}>About</NavLink></Menu.Item>
+
             </Menu>
 
             <Menu
               theme="dark"
               mode="horizontal"
               defaultSelectedKeys={['1']}
-              style={{  float: "right" }}
+              style={{ float: "right" }}
               id='togglemenu'
             >
-              
-              <Button className="barsMenu" type="default"  onClick={this.showDrawer} >
-                <FaAlignJustify/>
+
+              <Button className="barsMenu" type="default" onClick={this.showDrawer} >
+                <FaAlignJustify />
               </Button>
             </Menu>
 
@@ -92,9 +99,14 @@ class Main extends Component {
               visible={this.state.visible}
             >
               <div>
-                <Link to='/Motivation' onClick={this.onClose}><p>Motivation</p></Link>
-                <Link to='/Life' onClick={this.onClose}><p>Life</p></Link>
-                <Link to='/MyQuotes' onClick={this.onClose}><p>MyQuotes</p></Link>
+                {
+                  Categories.map((item, key) => {
+                    let path = '/' + item.title;
+                    return (
+                      <Link to={path} onClick={this.onClose}><p>{item.title}</p></Link>
+                    )
+                  })
+                }
                 <Link to='/About' onClick={this.onClose}><p>About</p></Link>
               </div>
 

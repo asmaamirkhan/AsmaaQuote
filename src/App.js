@@ -4,15 +4,22 @@
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 import React from 'react';
-import Main from './components/Main'
-import PageContent from './components/PageContent'
+import Main from './components/Main';
+import Categories from './components/data/categories'; 
 function App() {
+
   return (
       <BrowserRouter>
           <Switch>
-          <Route exact path="/Life" component={Main} />
-          <Route exact path="/Motivation" component={Main} />
-          <Route exact path="/MyQuotes" component={Main} />
+            {
+              Categories.map((item, key) => {
+                let path = '/'+item.title;
+                return (
+                  <Route exact path={path} component={Main} />
+                )
+              })
+            }
+          
           <Route path="/" component={Main} />
 
           </Switch>
