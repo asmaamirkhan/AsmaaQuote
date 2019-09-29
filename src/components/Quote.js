@@ -8,10 +8,19 @@ import '../styles/style.css';
 const { Meta } = Card;
 
 class Quote extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      colors: ['#f8ecf8', '#ecf8f6', '#faeeea', '#f3eafa', '#fafaea']
+    }
+
+  }
+
+
   render() {
     return (
       
-        <Card style={{   height:'100%' }}  >
+        <Card style={{   height:'100%', background: this.state.colors[Math.floor(Math.random() * 5)]  }}  >
           <Meta
             title={this.props.title}
             avatar={
