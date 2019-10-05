@@ -21,9 +21,11 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoryi: this.props.location.pathname.replace('/', ''),
-      category: this.props.history.location.pathname.replace('/', ''),
-      visible: false
+      redirect: false,
+      visible: false,
+      category: Categories[0].title,
+      titles: Categories.map(value => value.title),
+      index: 0
     }
 
   }
@@ -33,6 +35,7 @@ class Main extends Component {
       visible: true,
     });
   };
+
   onClose = () => {
     this.setState({
       visible: false,
@@ -40,17 +43,42 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    //console.log(Categories)
+    this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
+      let index = this.state.titles.indexOf(this.state.category)
+      console.log(index)
+      if (index < 0 || this.state.category == '') {
+        this.setState({ category: Categories[0].title, redirect: true, index: 0 }, () => {
+          if (this.state.redirect)
+            this.props.history.push('/');
+        });
+      } else {
+        this.setState({ index: index })
+      }
+      //console.log(this.state)
+    })
+    this.props.history.listen((location, action) => {
+      this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
+        let index = this.state.titles.indexOf(this.state.category)
+        console.log(index, this.state.category)
+        if (index < 0 || this.state.category == '') {
+          this.setState({ category: Categories[0].title, redirect: true, index: 0 });
+          //this.props.history.push('/');
+        } else {
+          this.setState({ index: index })
+        }
 
+
+      })
+    })
+  }
+  componentWillUpdate() {
+
+    
   }
 
-componentDidUpdate(){
-  //console.log(this.state)
-
-}
-
-
   render() {
+
+    console.log(this.state)
     return (
       <div>
         <Layout>
@@ -62,19 +90,19 @@ componentDidUpdate(){
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['0']}
+              defaultSelectedKeys={[this.state.index.toString()]}
               style={{ lineHeight: '64px', float: "right" }}
               id='mainmenu'
             >
               {
-                  Categories.map((item, key) => {
-                    let path = '/' + item.title;
-                    return (
-                      <Menu.Item key={key}><NavLink to={path}>{item.title}</NavLink></Menu.Item>
-                    )
-                  })
-                }
-              
+                Categories.map((item, key) => {
+                  let path = '/' + item.title;
+                  return (
+                    <Menu.Item key={key}><NavLink to={path}>{item.title}</NavLink></Menu.Item>
+                  )
+                })
+              }
+
               <Menu.Item ><NavLink to={'/About'}>About</NavLink></Menu.Item>
 
             </Menu>
@@ -82,7 +110,7 @@ componentDidUpdate(){
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['0']}
+              defaultSelectedKeys={[this.state.index.toString()]}
               style={{ float: "right" }}
               id='togglemenu'
             >

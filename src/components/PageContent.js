@@ -14,62 +14,38 @@ class PageContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: false,
-      quotes: [],
       category: this.props.category,
-      path: (this.props.category).toLowerCase(),
-      categories: require('./data/categories'),
-      titles: Categories.map(value => value.title),
-      categoryId:0
+      quotes: [],
+      cat_info: Categories[0]
     }
+  }
+
+  componentDidMount() {
+
+
+    this.setState({ quotes: require('./data/'.concat((this.props.category).toLowerCase())), category: this.props.category });
+    let index = Categories.findIndex(obj => obj.title == this.props.category);
+    this.setState({ cat_info: Categories[index] });
 
   }
 
-
-  componentDidMount() {
-    
-    
-    this.props.history.listen((location, action) => {
-      this.setState({
-        path: this.props.history.location.pathname.replace('/', '').toLowerCase(),
-        category: this.props.history.location.pathname.replace('/', '')
-      }, () => {
-        let index = this.state.titles.indexOf(this.state.category);
-        
-        
-        if (index >= 0 || this.state.category == '') {
-          if (this.state.category) {
-            this.setState({ quotes: require('./data/'.concat(this.state.path)), categoryId: index });
-
-          } else {
-            this.setState({ quotes: require('./data/motivation'), category: 1 });
-            
-          }
-        }
-        else {
-          this.props.history.push('/');
-        }
-      })
-
-
-    });
-    let index = this.state.titles.indexOf(this.state.category);
-    if (index >= 0 || this.state.category == '') {
-      if (this.state.category) {
-        this.setState({ quotes: require('./data/'.concat(this.state.path)), categoryId: index });
-
-      } else {
-        this.setState({ quotes: require('./data/motivation'), categoryId:0 });
-
-      }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.category != '') {
+      this.setState({ quotes: require('./data/'.concat((this.props.category).toLowerCase())), category: this.props.category });
+      let index = Categories.findIndex(obj => obj.title == this.props.category);
+      this.setState({ cat_info: Categories[index] });
     }
-    else {
-      this.props.history.push('/');
-    }
+    console.log('asmaa')
+  }
 
+  componentDidUpdate() {
+
+    console.log(this.props)
   }
 
   render() {
+    console.log(this.state)
+    //console.log(this.props)
     return (
       <Content style={{ padding: '20px 25px', marginTop: 64 }}>
         <BackTop>
@@ -81,7 +57,7 @@ class PageContent extends Component {
             this.state.quotes.map((item, key) => {
               return (
                 <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
-                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} categoryId={this.state.categoryId}/>
+                  <Quote title={item.title} category={item.category} quote={item.content} author={item.author} catInfo={this.state.cat_info} />
                 </Col>
               )
             })
