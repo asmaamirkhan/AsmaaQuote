@@ -10,3 +10,11 @@ My own quote manager ✨
 ## Coming Soon
 * Documentation of Configuration
 * Multi language support
+
+## Status ⏰
+- [X] MVP 🎉
+
+> Fixing some routing and configuation issues 🐛
+
+## Contact
+Find me on [LinkedIn](https://www.linkedin.com/in/asmaa-mirkhan/) and feel free to mail me, [Asmaa 🦋](mailto:asmaamirkhan.am@gmail.com)
