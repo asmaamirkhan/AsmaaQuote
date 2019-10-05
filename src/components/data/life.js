@@ -4,7 +4,14 @@ module.exports = [
     category: "Life",
     content: "Spend time with people who are good for your mental health, those who want to see you grow, those who force you to push upurself up a level.",
     author: "Unknown"
-  }, {
+  }, 
+  {
+    title: "A Precious Gift 💫",
+    category: "Life",
+    content: "Time, is the most precious thing in the life, pay attention to who to give it to.",
+    author: "Unknown"
+  },
+  {
     title: "Real Education 👩‍🎓",
     category: "Life",
     content: "Your degree is just a piece of paper, your education is seen in your behaviour.",
