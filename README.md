@@ -8,8 +8,8 @@ My own quote manager ✨
 * AntDesign 🐜
 
 ## Coming Soon
-* Documentation of Configuration
-* Multi language support
+- [ ] Documentation of Configuration
+- [ ] Multi language support
 
 ## Status ⏰
 - [X] MVP 🎉
