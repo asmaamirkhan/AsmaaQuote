@@ -83,7 +83,7 @@ class About extends Component {
                 <Card title="What is AsmaaQuote? (I am a programmer 👩‍💻)" bordered={true} style={{background: '#ecf8f6'}} >
                 <p>
                   <MDReactComponent text='
-                    **AsmaaQuote** is an open-source 💖✨ project manager made by 
+                    **AsmaaQuote** is an open-source 💖✨ quote manager made by 
                     [Asmaa](https://github.com/asmaamirkhan) using:' /> 
                   <MDReactComponent text='* ReactJS ⚛'/>
                   <MDReactComponent text='* AntDesign 🐜'/>
