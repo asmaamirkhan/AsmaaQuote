@@ -1,43 +1,49 @@
 module.exports = [
   {
-    title: "Being pushed ❣",
+    title: "Time Management ⏰",
     category: "Life",
-    content: "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart",
-    author: "Asmaa"
+    content: "Spend time with people who are good for your mental health, those who want to see you grow, those who force you to push upurself up a level.",
+    author: "Unknown"
   }, {
-    title: "Control vs Energy 🔥",
+    title: "Real Education 👩‍🎓",
     category: "Life",
-    content: "Instead of worrying about what you cannot control, shift your energy to what you can create",
-    author: "Asmaa"
+    content: "Your degree is just a piece of paper, your education is seen in your behaviour.",
+    author: "Unknown"
   },
   {
-    title: "Comfort Zone 🦋",
+    title: "New People 👼",
     category: "Life",
-    content: "It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform.",
-    author: "Asmaa"
+    content: "We don't meet people by accident, they are meant to cross our path for a reason.",
+    author: "Unknown"
   },
   {
-    title: "Self happiness 💌",
+    title: "Deep Conversations 🌌",
     category: "Life",
-    content: "Take responsibility of your own happiness, never put it in other people’s hands.",
-    author: "Asmaa"
+    content: "Deep conversations with the right people are priceless.",
+    author: "Unknown"
   },
   {
-    title: "Someone's smile 🎶",
+    title: "Your Reality 🙌",
     category: "Life",
-    content: "Be the reason someone smiles. Be the reason someone feels loved and believes in the goodness in people",
-    author: "Asmaa"
+    content: "You are the average of the five people you spend the most time with.",
+    author: "Unknown"
   },
   {
-    title: "Self Love 🥰",
+    title: "True People 🥰",
     category: "Life",
-    content: "Accept yourself, love yourself, and keep moving forward. If you want to fly, you have to give up what weighs you down.",
-    author: "Asmaa"
+    content: "Go for some one who is proud to have you, stay beside who appreciates you",
+    author: "Unknown"
   },
   {
-    title: "Your Inner Voice 🎶",
+    title: "Choose Carefully 🧐",
     category: "Life",
-    content: "Follow your heart, listen to your inner voice, stop caring about what others think.",
-    author: "Asmaa"
+    content: "We slowly become the people - or things - we admire",
+    author: "Unknown"
+  },
+  {
+    title: "Real Knowledge 👩‍🏫",
+    category: "Life",
+    content: "Themow you know, the more you know what you don't know.",
+    author: "Unknown"
   }
 ];

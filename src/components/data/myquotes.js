@@ -1,43 +1,32 @@
 module.exports = [
   {
-    title: "Ship in harbor 🎈",
+    title: "The highest level of love 💕",
     category: "MyQuotes",
-    content: "A ship in harbor is safe, but that is not what ships are built for.",
+    content: "The highest level of love is to be able to relieve the pain of our loved ones even though we did not live by ourselves.",
     author: "Asmaa"
   }, {
-    title: "Comfort Zone 🐾",
+    title: "The effect of a smile 😊",
     category: "MyQuotes",
-    content: "Great things never come from comfort zones.",
+    content: "The effect of a smile does not change by different cultures, it is the universal language of kindness 🤗",
     author: "Asmaa"
   },
   {
-    title: "Push yourself",
+    title: "Beauty 🌸",
     category: "MyQuotes",
-    content: "Push yourself, because no one else is going to do it for you.",
+    content: "Beauty always reserved in details, don't let the big picture steal your attention! ",
     author: "Asmaa"
   },
   {
-    title: "Search 🔍",
+    title: "Negative people 😪",
     category: "MyQuotes",
-    content: "Success doesn’t just find you. You have to go out and get it.",
+    content: "Life is full by negative people, mostly you have to listen to them, be careful not to get of their negative energy.",
     author: "Asmaa"
   },
   {
-    title: "Hard work ✨",
+    title: "When To Stop 🤐",
     category: "MyQuotes",
-    content: "The harder you work for something, the greater you’ll feel when you achieve it.",
-    author: "Asmaa"
-  },
-  {
-    title: "Don't stop 🚀",
-    category: "MyQuotes",
-    content: "Don’t stop when you’re tired. Stop when you’re done.",
-    author: "Asmaa"
-  },
-  {
-    title: "Believe in yourself ❤",
-    category: "MyQuotes",
-    content: "Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.",
+    content: "when discussion turns to controversy, stop it immediately, it will be a waste of time and energy for both of you.",
     author: "Asmaa"
   }
 ];
+
