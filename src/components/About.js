@@ -10,6 +10,9 @@ import { FaArrowCircleUp, FaCode } from "react-icons/fa";
 import MyMenu from './MyMenu';
 import Logo from './media/logo.png'
 import MDReactComponent from 'markdown-react-js';
+import { GiButterfly } from "react-icons/gi";
+
+
 const { Content, Footer } = Layout;
 
 
@@ -61,21 +64,19 @@ class About extends Component {
             <Row gutter={12} type='flex'>
               
               <Col xs={24} sm={6} md={6} lg={6} xl={6} style={{ marginTop: 16 }} >
-                <FaCode size ='6em' color='#FFFFFF' style={{ border: '2px solid #1890FF', borderRadius: '50px' , padding:'20px', background: '#1890FF' }} />
+                <GiButterfly size ='6em' color='#FFFFFF' style={{ border: '2px solid #FF9C08', borderRadius: '50px' , padding:'20px', background: '#FF9C08' }} />
               </Col>
 
               <Col xs={24} sm={18} md={18} lg={18} xl={18} style={{ marginTop: 16 }} >
 
-                <Card title="What is AsmaaQuote? (I am a programmer 👩‍💻)" bordered={true} style={{background: '#faeeea'}} >
+                <Card title="Who is Asmaa? 🦋" bordered={true} style={{background: '#faeeea'}} >
                 <p>
-                  <MDReactComponent text='
-                    **AsmaaQuote** is an open-source 💖✨ project manager made by 
-                    [Asmaa](https://github.com/asmaamirkhan) using:' /> 
-                  <MDReactComponent text='* ReactJS ⚛'/>
-                  <MDReactComponent text='* AntDesign 🐜'/>
-                  <MDReactComponent text='You can configure **AsmaaQuote** to create your own quote manager 
-                  easily just by editing few lines of code 🤗, documentation is under development, it will 
-                  be puplished on GitHub as it will be ready, wait for it! ⏰'/>
+                <MDReactComponent text='
+                    As a **life position** I am just a learner 🤔 who wants to learn continuously, no matter about what, 
+                    I want to increase my knowledge and awareness by every useful information. At the same time I like 
+                    to write my thoughts and due to that I created this small platform.
+                    For my educational and professional info check my [LinkedIn profile](https://www.linkedin.com/in/asmaa-mirkhan/)
+                  ' /> 
                 </p>
 
                 </Card>
@@ -86,7 +87,7 @@ class About extends Component {
             <Row gutter={12} type='flex'>
               
               <Col xs={24} sm={6} md={6} lg={6} xl={6} style={{ marginTop: 16 }} >
-                <FaCode size ='6em' color='#FFFFFF' style={{ border: '2px solid #1890FF', borderRadius: '50px' , padding:'20px', background: '#1890FF' }} />
+                <FaCode size ='6em' color='#FFFFFF' style={{ border: '2px solid #131E66', borderRadius: '50px' , padding:'20px', background: '#131E66' }} />
               </Col>
 
               <Col xs={24} sm={18} md={18} lg={18} xl={18} style={{ marginTop: 16 }} >
