@@ -18,8 +18,8 @@ class Quote extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state)
-    console.log(this.props)
+    // console.log(this.state)
+    //  console.log(this.props)
   }
 
   componentWillUpdate() {

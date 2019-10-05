@@ -5,15 +5,12 @@ import React, { Component } from 'react';
 
 import 'antd/dist/antd.css';
 import '../styles/style.css';
-import { Layout, Menu, Drawer, Button } from 'antd';
+import { Layout } from 'antd';
 
-import Logo from './media/logo.png'
 import PageContent from './PageContent';
-import { NavLink, Link } from "react-router-dom";
-import { FaAlignJustify } from "react-icons/fa";
 import Categories from './data/categories';
-
-const { Header, Footer } = Layout;
+import MyMenu from './MyMenu';
+const { Footer } = Layout;
 
 
 class Main extends Component {
@@ -73,7 +70,7 @@ class Main extends Component {
   }
   componentWillUpdate() {
 
-    
+
   }
 
   render() {
@@ -82,67 +79,8 @@ class Main extends Component {
     return (
       <div>
         <Layout>
-          <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
 
-            <a href='https://github.com/asmaamirkhan/AsmaaQuote' target='_blank'>
-              <img alt='image' src={Logo} style={{ height: '40px' }} />
-            </a>
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={[this.state.index.toString()]}
-              style={{ lineHeight: '64px', float: "right" }}
-              id='mainmenu'
-            >
-              {
-                Categories.map((item, key) => {
-                  let path = '/' + item.title;
-                  return (
-                    <Menu.Item key={key}><NavLink to={path}>{item.title}</NavLink></Menu.Item>
-                  )
-                })
-              }
-
-              <Menu.Item ><NavLink to={'/About'}>About</NavLink></Menu.Item>
-
-            </Menu>
-
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={[this.state.index.toString()]}
-              style={{ float: "right" }}
-              id='togglemenu'
-            >
-
-              <Button className="barsMenu" type="default" onClick={this.showDrawer} >
-                <FaAlignJustify />
-              </Button>
-            </Menu>
-
-
-            <Drawer
-              title="Asmaa Quote"
-              placement="top"
-              closable={true}
-              onClose={this.onClose}
-              visible={this.state.visible}
-            >
-              <div>
-                {
-                  Categories.map((item, key) => {
-                    let path = '/' + item.title;
-                    return (
-                      <Link to={path} onClick={this.onClose}><p>{item.title}</p></Link>
-                    )
-                  })
-                }
-                <Link to='/About' onClick={this.onClose}><p>About</p></Link>
-              </div>
-
-
-            </Drawer>
-          </Header>
+          <MyMenu default={this.state.index} />
 
           <PageContent category={this.state.category} />
 
