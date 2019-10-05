@@ -1,8 +1,8 @@
 /* 
   author: Asmaa Mirkhan ~ 2019
 */
-import React, { Component } from 'react';
 
+import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import '../styles/style.css';
 import { Layout, Row, Col, BackTop, Card } from 'antd';
@@ -12,21 +12,9 @@ import Logo from './media/logo.png'
 import MDReactComponent from 'markdown-react-js';
 import { GiButterfly } from "react-icons/gi";
 
-
 const { Content, Footer } = Layout;
 
-
 class About extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-
-  }
-
-
 
   render() {
     return (
@@ -75,7 +63,7 @@ class About extends Component {
                     As a **life position** I am just a learner 🤔 who wants to learn continuously, no matter about what, 
                     I want to increase my knowledge and awareness by every useful information. At the same time I like 
                     to write my thoughts and due to that I created this small platform.
-                    For my educational and professional info check my [LinkedIn profile](https://www.linkedin.com/in/asmaa-mirkhan/)
+                    For my educational and professional info check my [LinkedIn profile 🙋‍♀️](https://www.linkedin.com/in/asmaa-mirkhan/).
                   ' /> 
                 </p>
 
@@ -102,6 +90,7 @@ class About extends Component {
                   <MDReactComponent text='You can configure **AsmaaQuote** to create your own quote manager 
                   easily just by editing few lines of code 🤗, documentation is under development, it will 
                   be puplished on GitHub as it will be ready, wait for it! ⏰'/>
+                   <MDReactComponent text='* Check out GitHub repo [here](https://github.com/asmaamirkhan/AsmaaQuote)🔍. '/>
                 </p>
 
                 </Card>

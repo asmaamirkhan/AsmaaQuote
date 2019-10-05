@@ -1,19 +1,17 @@
 /* 
   author: Asmaa Mirkhan ~ 2019
 */
-import React, { Component } from 'react';
 
+import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import '../styles/style.css';
 import { Layout, Menu, Drawer, Button } from 'antd';
-
 import Logo from './media/logo.png'
 import { NavLink, Link } from "react-router-dom";
 import { FaAlignJustify } from "react-icons/fa";
 import Categories from './data/categories';
 
 const { Header } = Layout;
-
 
 class MyMenu extends Component {
 

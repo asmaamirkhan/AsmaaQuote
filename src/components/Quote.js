@@ -1,10 +1,12 @@
 /*
   author: Asmaa Mirkhan ~ 2019
 */
+
 import React, { Component } from 'react';
 import { Card, Divider, Tag, Icon } from 'antd';
 import '../styles/style.css';
 import Categories from './data/categories';
+
 const { Meta } = Card;
 
 class Quote extends Component {
@@ -17,19 +19,8 @@ class Quote extends Component {
     }
   }
 
-  componentDidMount() {
-    // console.log(this.state)
-    //  console.log(this.props)
-  }
-
-  componentWillUpdate() {
-
-    /*console.log(this.props)
-    console.log(this.state)*/
-  }
 
   render() {
-    // console.log(this.props)
     return (
 
       <Card style={{ height: '100%', background: this.state.colors[Math.floor(Math.random() * 5)] }}  >

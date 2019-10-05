@@ -1,6 +1,7 @@
 /*
   author: Asmaa Mirkhan ~ 2019
 */
+
 import React, { Component } from 'react';
 import { Layout, Row, Col, BackTop } from 'antd';
 import Quote from './Quote';
@@ -8,7 +9,9 @@ import { withRouter } from 'react-router';
 import '../styles/style.css';
 import { FaArrowCircleUp } from "react-icons/fa";
 import Categories from './data/categories';
+
 const { Content } = Layout;
+
 class PageContent extends Component {
 
   constructor(props) {
@@ -21,12 +24,9 @@ class PageContent extends Component {
   }
 
   componentDidMount() {
-
-
     this.setState({ quotes: require('./data/'.concat((this.props.category).toLowerCase())), category: this.props.category });
     let index = Categories.findIndex(obj => obj.title == this.props.category);
     this.setState({ cat_info: Categories[index] });
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,17 +35,10 @@ class PageContent extends Component {
       let index = Categories.findIndex(obj => obj.title == this.props.category);
       this.setState({ cat_info: Categories[index] });
     }
-    console.log('asmaa')
   }
 
-  componentDidUpdate() {
-
-    console.log(this.props)
-  }
 
   render() {
-    console.log(this.state)
-    //console.log(this.props)
     return (
       <Content style={{ padding: '20px 25px', marginTop: 64 }}>
         <BackTop>

@@ -1,17 +1,16 @@
 /* 
   author: Asmaa Mirkhan ~ 2019
 */
-import React, { Component } from 'react';
 
+import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import '../styles/style.css';
 import { Layout } from 'antd';
-
 import PageContent from './PageContent';
 import Categories from './data/categories';
 import MyMenu from './MyMenu';
-const { Footer } = Layout;
 
+const { Footer } = Layout;
 
 class Main extends Component {
 
@@ -42,7 +41,6 @@ class Main extends Component {
   componentDidMount() {
     this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
       let index = this.state.titles.indexOf(this.state.category)
-      console.log(index)
       if (index < 0 || this.state.category == '') {
         this.setState({ category: Categories[0].title, redirect: true, index: 0 }, () => {
           if (this.state.redirect)
@@ -51,7 +49,6 @@ class Main extends Component {
       } else {
         this.setState({ index: index })
       }
-      //console.log(this.state)
     })
     this.props.history.listen((location, action) => {
       this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
@@ -59,23 +56,14 @@ class Main extends Component {
         console.log(index, this.state.category)
         if (index < 0 || this.state.category == '') {
           this.setState({ category: Categories[0].title, redirect: true, index: 0 });
-          //this.props.history.push('/');
         } else {
           this.setState({ index: index })
         }
-
-
       })
     })
   }
-  componentWillUpdate() {
-
-
-  }
 
   render() {
-
-    console.log(this.state)
     return (
       <div>
         <Layout>
