@@ -23,10 +23,12 @@ class PageContent extends Component {
     }
   }
 
-  componentDidMount() {
-    this.setState({ quotes: require('./data/'.concat((this.props.category).toLowerCase())), category: this.props.category });
-    let index = Categories.findIndex(obj => obj.title == this.props.category);
-    this.setState({ cat_info: Categories[index] });
+  shuffleQuotes = (quotes) => {
+    for (let i = quotes.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [quotes[i], quotes[j]] = [quotes[j], quotes[i]];
+    }
+    return quotes;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -47,7 +49,8 @@ class PageContent extends Component {
         <Row gutter={12} type='flex'>
 
           {
-            this.state.quotes.map((item, key) => {
+
+            this.shuffleQuotes(this.state.quotes).map((item, key) => {
               return (
                 <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ marginTop: 16 }}>
                   <Quote title={item.title} category={item.category} quote={item.content} author={item.author} catInfo={this.state.cat_info} />
