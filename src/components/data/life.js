@@ -50,7 +50,7 @@ module.exports = [
   {
     title: "Real Knowledge 👩‍🏫",
     category: "Life",
-    content: "Themow you know, the more you know what you don't know.",
+    content: "The more you know, the more you know what you don't know.",
     author: "Unknown"
   }
 ];
