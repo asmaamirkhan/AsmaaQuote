@@ -25,7 +25,19 @@ module.exports = [
   {
     title: "When To Stop 🤐",
     category: "MyQuotes",
-    content: "when discussion turns to controversy, stop it immediately, it will be a waste of time and energy for both of you.",
+    content: "When discussion turns to controversy, stop it immediately, it will be a waste of time and energy for both of you.",
+    author: "Asmaa"
+  },
+  {
+    title: "Successful Person ✨",
+    category: "MyQuotes",
+    content: "Every successful one has two projects, one to improve himself and the other to improve people around him",
+    author: "Asmaa"
+  },
+  {
+    title: "Reality of time ⌚",
+    category: "MyQuotes",
+    content: "We can not say that the time is a constant at all. It is fully connected to the heart and its speed is directly proportional with the peaceful of the heart.",
     author: "Asmaa"
   }
 ];
