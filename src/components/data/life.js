@@ -52,5 +52,11 @@ module.exports = [
     category: "Life",
     content: "The more you know, the more you know what you don't know.",
     author: "Unknown"
+  },
+  {
+    title: "True People 💖",
+    category: "Life",
+    content: "Choose people who choose you.",
+    author: "Unknown"
   }
 ];
