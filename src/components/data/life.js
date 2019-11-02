@@ -58,5 +58,11 @@ module.exports = [
     category: "Life",
     content: "Choose people who choose you.",
     author: "Unknown"
+  },
+  {
+    title: "Is it just about reading? 👩‍🏫",
+    category: "Life",
+    content: "Don't teach your children to read; teach them to question what they read, teach them to question everything.",
+    author: "Unknown"
   }
 ];
