@@ -38,7 +38,7 @@ class About extends Component {
                 <Card title="What is AsmaaQuote? 👼" bordered={true} style={{background: '#f8ecf8'}} >
                 <p>
                   <MDReactComponent text='
-                    **AsmaaQuote** is the quote manager of [Asmaa 🦋](https://www.linkedin.com/in/asmaa-mirkhan/) where she 
+                    **AsmaaQuote** is the quote manager of [Asmaa 🦋](https://www.linkedin.com/in/asmaamirkhan/) where she 
                     shares quotes that she likes and writes. quotes at AsmaaQuote will be updated as Asmaa writes or learns new 
                     quotes 👩‍🏫. **STAY TUNED** 🎉
                   ' /> 
@@ -63,7 +63,7 @@ class About extends Component {
                     As a **life position** I am just a learner 🤔 who wants to learn continuously, no matter about what, 
                     I want to increase my knowledge and awareness by every useful information. At the same time I like 
                     to write my thoughts and due to that I created this small platform.
-                    For my educational and professional info check my [LinkedIn profile 🙋‍♀️](https://www.linkedin.com/in/asmaa-mirkhan/).
+                    For my educational and professional info check my [LinkedIn profile 🙋‍♀️](https://www.linkedin.com/in/asmaamirkhan/).
                   ' /> 
                 </p>
 
@@ -99,7 +99,7 @@ class About extends Component {
             </Row>
 
           </Content>
-          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaa-mirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
+          <Footer style={{ textAlign: 'center' }}>AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaamirkhan/' target='_blank'>Asmaa Mirkhan</a></Footer>
         </Layout>
       </div>
     );
