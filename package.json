@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "AsmaaQuote",
+  "homepage": "https://asmaamirkhan.github.io/AsmaaQuote",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
