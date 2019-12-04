@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c978accab6f302b737e7158b25b10b96",
+    "revision": "ffd7e055d7ca5f9916f11d34e13c0d1e",
     "url": "/AsmaaQuote/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AsmaaQuote/static/css/2.cc82b09a.chunk.css"
   },
   {
-    "revision": "e932598c645266d65589",
+    "revision": "05885efaa54f4e8847bb",
     "url": "/AsmaaQuote/static/css/main.ac6c194e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AsmaaQuote/static/js/2.9535f153.chunk.js"
   },
   {
-    "revision": "e932598c645266d65589",
-    "url": "/AsmaaQuote/static/js/main.6c3532c5.chunk.js"
+    "revision": "05885efaa54f4e8847bb",
+    "url": "/AsmaaQuote/static/js/main.37452c81.chunk.js"
   },
   {
     "revision": "a3bcfe6470b9ce679572",
