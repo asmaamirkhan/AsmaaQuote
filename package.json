@@ -1,22 +1,22 @@
 {
-  "homepage": "http://asmaamirkhan.github.io/AsmaaQuote",
-  "name": "my-app",
+  "homepage": "https://asmaamirkhan.github.io/AsmaaQuote",
+  "name": "asmaa-quote",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.1.1",
     "antd": "^3.23.4",
+    "gh-pages": "^2.1.1",
     "markdown-react-js": "^1.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.1.2"
+    "react-scripts": "3.1.2"
   },
   "scripts": {
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1"
   }
 }
