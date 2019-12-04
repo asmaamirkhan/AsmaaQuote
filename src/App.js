@@ -20,7 +20,7 @@ function App() {
               })
             }
           <Route exact path="/About" component={About} />
-          <Route path="/" component={Main} />
+          <Route path="/" component={About} />
 
           </Switch>
   );
