@@ -21,6 +21,7 @@ function App() {
             }
           <Route exact path="/About" component={About} />
           <Route path="/" component={About} />
+          <Route path="/asmaaquote" component={About} />
 
           </Switch>
   );
