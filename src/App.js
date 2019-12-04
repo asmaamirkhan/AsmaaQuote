@@ -1,7 +1,7 @@
 /*
  author: Asmaa Mirkhan ~ 2019
 */
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, HashRouter } from 'react-router-dom';
 
 import React from 'react';
 import Main from './components/Main';
@@ -10,7 +10,7 @@ import Categories from './components/data/categories';
 function App() {
 
   return (
-      <BrowserRouter>
+      <HashRouter>
           <Switch>
             {
               Categories.map((item, key) => {
@@ -24,7 +24,7 @@ function App() {
           <Route path="/" component={Main} />
 
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
   );
 }
 
