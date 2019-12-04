@@ -32,7 +32,8 @@ class PageContent extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.category != '') {
+    if (this.props.category != '' && this.props.category != 'asmaaquote') {
+      console.log(this.props)
       this.setState({ quotes: require('./data/'.concat((this.props.category).toLowerCase())), category: this.props.category });
       let index = Categories.findIndex(obj => obj.title == this.props.category);
       this.setState({ cat_info: Categories[index] });

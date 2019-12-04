@@ -39,9 +39,11 @@ class Main extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props)
     this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
       let index = this.state.titles.indexOf(this.state.category)
-      if (index < 0 || this.state.category == '') {
+      console.log(this.state)
+      if (index < 0 || this.state.category == '' || this.state.category == 'asmaaquote') {
         this.setState({ category: Categories[0].title, redirect: true, index: 0 }, () => {
           if (this.state.redirect)
             this.props.history.push('/');
@@ -54,7 +56,8 @@ class Main extends Component {
       this.setState({ category: this.props.history.location.pathname.replace('/', '') }, () => {
         let index = this.state.titles.indexOf(this.state.category)
         console.log(index, this.state.category)
-        if (index < 0 || this.state.category == '') {
+
+        if (index < 0 || this.state.category == '' || this.state.category == 'asmaaquote') {
           this.setState({ category: Categories[0].title, redirect: true, index: 0 });
         } else {
           this.setState({ index: index })

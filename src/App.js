@@ -20,9 +20,8 @@ function App() {
               })
             }
           <Route exact path="/About" component={About} />
-          <Route path="/" component={About} />
-          <Route path="/asmaaquote" component={About} />
-
+          <Route path="/" component={Main} />
+          <Route path="/asmaaquote" component={Main} />
           </Switch>
   );
 }
