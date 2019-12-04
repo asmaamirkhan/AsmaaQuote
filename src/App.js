@@ -10,7 +10,6 @@ import Categories from './components/data/categories';
 function App() {
 
   return (
-      <HashRouter>
           <Switch>
             {
               Categories.map((item, key) => {
@@ -24,7 +23,6 @@ function App() {
           <Route path="/" component={Main} />
 
           </Switch>
-        </HashRouter>
   );
 }
 
