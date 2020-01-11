@@ -10,10 +10,8 @@ const { Meta } = Card;
 class AsmaaQuoteComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
-  componentDidMount() {}
 
   render() {
     return (
@@ -21,13 +19,15 @@ class AsmaaQuoteComponent extends Component {
         <Meta
           title={this.props.title}
           avatar={
-            <Icon type={this.props.category.icon} style={{ fontSize: 45, color: this.props.category.color  }} />
+            <Icon
+              type={this.props.category.icon}
+              style={{ fontSize: 45, color: this.props.category.color }}
+            />
           }
           description={
             <div>
               <spam>Category: </spam>
-              <Tag >{this.props.category.name}</Tag>
-              
+              <Tag>{this.props.category.name}</Tag>
             </div>
           }
         />

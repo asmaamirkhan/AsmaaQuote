@@ -23,23 +23,20 @@ class AsmaaQuoteContent extends Component {
     this.fetchData();
   }
 
-  
-
   fetchData = () => {
-    this.setState({quotes: []}, ()=>{
+    this.setState({ quotes: [] }, () => {
       db.collection("quotes")
-      .where("category", "==", this.props.category.name)
-      .get()
-      .then(data => {
-        data.forEach(item => {
-          this.setState({ quotes: [...this.state.quotes, item.data()] });
+        .where("category", "==", this.props.category.name)
+        .get()
+        .then(data => {
+          data.forEach(item => {
+            this.setState({ quotes: [...this.state.quotes, item.data()] });
+          });
+        })
+        .catch(error => {
+          console.log(error);
         });
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    })
-    
+    });
   };
 
   render() {
