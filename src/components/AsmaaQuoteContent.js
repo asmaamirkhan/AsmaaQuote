@@ -7,8 +7,6 @@ import { Layout, Col, Row } from "antd";
 import AsmaaQuoteComponent from "./AsmaaQuoteComponent";
 import { db } from "./firebase/config";
 
-import Data from "../temp/myquotes";
-
 const { Content } = Layout;
 
 class AsmaaQuoteContent extends Component {

@@ -1,6 +1,6 @@
 import React from "react";
 import AsmaaQuoteMain from "./components/AsmaaQuoteMain";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Categories from "./components/media/categories";
 import dotenv from 'dotenv';
 function App() {
