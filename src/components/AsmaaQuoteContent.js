@@ -2,36 +2,53 @@
   author: Asmaa Mirkhan ~ 2019
 */
 
-import React, { Component } from 'react';
-import AsmaaQuoteComponent from './AsmaaQuoteComponent';
-import { Layout, Menu, Breadcrumb } from 'antd'; 
-const { Content, Footer } = Layout;
+import React, { Component } from "react";
+import { Layout, Col, Row } from "antd";
+import AsmaaQuoteComponent from "./AsmaaQuoteComponent";
+
+import Data from "../temp/myquotes";
+
+const { Content } = Layout;
+
 class AsmaaQuoteContent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quotes: []
+    };
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {
+  componentDidMount() {
+    this.setState({ quotes: Data });
+  }
 
-        }
-
-    }
-
-    componentDidMount() {
-        
-    }
-
-
-
-    render() {
-        return (
-            <Content style={{ padding: '0 50px' }}>
-
-<AsmaaQuoteComponent title='title' category='cat' quote='quote' cat_info='info' />
-        </Content>
-           
-        );
-
-    }
+  render() {
+    return (
+      <Content style={{ padding: "10px 25px", marginTop: 64 }}>
+        <Row gutter={12} type="flex">
+          {this.state.quotes.map((item, key) => {
+            return (
+              <Col
+                xs={24}
+                sm={12}
+                md={12}
+                lg={8}
+                xl={6}
+                style={{ marginTop: 16 }}
+              >
+                <AsmaaQuoteComponent
+                  title={item.title}
+                  category={item.category}
+                  quote={item.content}
+                  author={item.author}
+                />
+              </Col>
+            );
+          })}
+        </Row>
+      </Content>
+    );
+  }
 }
 
 export default AsmaaQuoteContent;
