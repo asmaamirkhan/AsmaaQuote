@@ -30,7 +30,7 @@ class AsmaaQuoteMain extends Component {
         return (
             <div>
                 <Layout className="layout">
-                    <AsmaaQuoteMenu />
+                    <AsmaaQuoteMenu selected={this.props.selected} />
                    <AsmaaQuoteContent category={this.props.category}/>
                     <Footer style={{ textAlign: 'center' }}>
                         AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaamirkhan/' target='_blank'>Asmaa Mirkhan</a>

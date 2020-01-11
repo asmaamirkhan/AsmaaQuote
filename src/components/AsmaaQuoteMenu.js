@@ -38,7 +38,7 @@ class AsmaaQuoteMenu extends Component {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['0']}
+                    defaultSelectedKeys={this.props.selected.toString()}
                     style={{ lineHeight: '64px',  float: 'right' }}
                 >
 
@@ -47,7 +47,7 @@ class AsmaaQuoteMenu extends Component {
                             return (<Menu.Item key={key}><Link to={'/' + item.name}> {item.name}</Link></Menu.Item>)
                         })
                     }
-                    <Menu.Item key={-1}><Link to={'/About'}>About</Link></Menu.Item>
+                    <Menu.Item key={Categories.size}><Link to={'/About'}>About</Link></Menu.Item>
                 </Menu>
             </Header>
         );
