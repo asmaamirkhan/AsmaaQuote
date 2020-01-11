@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Content from './components/Content'
+import Content from './components/AsmaaQuoteMenu'
 function App() {
   return (
     
       <div className="App">
-         <p>Asmaa Quote</p>
          <Content/>
       </div>
     
