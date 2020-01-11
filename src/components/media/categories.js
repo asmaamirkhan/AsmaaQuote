@@ -1,4 +1,4 @@
-module.exports = [
+const Categories = [
     {
         'name': 'MyQuotes',
         'color': '#FFFFFF',
@@ -18,3 +18,5 @@ module.exports = [
         'color': '#1890FF'
     }
  ];
+
+ export default Categories;
