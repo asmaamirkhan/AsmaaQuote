@@ -31,7 +31,7 @@ class AsmaaQuoteMain extends Component {
             <div>
                 <Layout className="layout">
                     <AsmaaQuoteMenu />
-                   <AsmaaQuoteContent/>
+                   <AsmaaQuoteContent category={this.props.category}/>
                     <Footer style={{ textAlign: 'center' }}>
                         AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaamirkhan/' target='_blank'>Asmaa Mirkhan</a>
                     </Footer>

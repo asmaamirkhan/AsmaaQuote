@@ -5,6 +5,7 @@
 import React, { Component } from "react";
 import { Layout, Col, Row } from "antd";
 import AsmaaQuoteComponent from "./AsmaaQuoteComponent";
+import { db } from "../config";
 
 import Data from "../temp/myquotes";
 
@@ -19,8 +20,27 @@ class AsmaaQuoteContent extends Component {
   }
 
   componentDidMount() {
-    this.setState({ quotes: Data });
+    this.fetchData();
   }
+
+  
+
+  fetchData = () => {
+    this.setState({quotes: []}, ()=>{
+      db.collection("quotes")
+      .where("category", "==", this.props.category)
+      .get()
+      .then(data => {
+        data.forEach(item => {
+          this.setState({ quotes: [...this.state.quotes, item.data()] });
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    })
+    
+  };
 
   render() {
     return (
