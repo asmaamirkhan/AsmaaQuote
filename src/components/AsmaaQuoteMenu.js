@@ -7,6 +7,8 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
 import Categories from './media/categories';
 import Logo from './media/AsmaaQuoteLogo.png';
+import { Link } from 'react-router-dom';
+
 const { Header, Content, Footer } = Layout;
 
 class AsmaaQuoteMenu extends Component {
@@ -42,10 +44,10 @@ class AsmaaQuoteMenu extends Component {
 
                     {
                         Categories.map((item, key) => {
-                            return (<Menu.Item key={key}>{item.name}</Menu.Item>)
+                            return (<Menu.Item key={key}><Link to={'/' + item.name}> {item.name}</Link></Menu.Item>)
                         })
                     }
-                    <Menu.Item key={-1}>About</Menu.Item>
+                    <Menu.Item key={-1}><Link to={'/About'}>About</Link></Menu.Item>
                 </Menu>
             </Header>
         );
