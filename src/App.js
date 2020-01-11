@@ -7,9 +7,9 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path='/' component={AsmaaQuoteMain} />
+      <Route path='/' component={()=><AsmaaQuoteMain/>} />
         {Categories.map((item, key) => {
-          return <Route path={"/"+item.name} component={AsmaaQuoteMain} />;
+          return <Route path={"/"+item.name} component={()=><AsmaaQuoteMain/>} />;
         })}
       </Switch>
     </Router>

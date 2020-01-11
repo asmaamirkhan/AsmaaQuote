@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import AsmaaQuoteMenu from './AsmaaQuoteMenu';
 import AsmaaQuoteContent from './AsmaaQuoteContent';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
 const { Content, Footer } = Layout;
