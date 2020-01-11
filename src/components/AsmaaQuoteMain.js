@@ -4,10 +4,11 @@
 
 import React, { Component } from 'react';
 import AsmaaQuoteMenu from './AsmaaQuoteMenu';
+import AsmaaQuoteContent from './AsmaaQuoteContent';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
 
-const { Header, Content, Footer } = Layout;
+const { Content, Footer } = Layout;
 
 class AsmaaQuoteMain extends Component {
 
@@ -28,13 +29,12 @@ class AsmaaQuoteMain extends Component {
     render() {
         return (
             <div>
-                <Layout>
-                    <AsmaaQuoteMenu/>
-                    <Content style={{ padding: '0 50px' }}>
-
-                        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
-                    </Content>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                <Layout className="layout">
+                    <AsmaaQuoteMenu />
+                   <AsmaaQuoteContent/>
+                    <Footer style={{ textAlign: 'center' }}>
+                        AsmaaQuote Project ©2019 Made with ❤ by <a href='https://www.linkedin.com/in/asmaamirkhan/' target='_blank'>Asmaa Mirkhan</a>
+                    </Footer>
                 </Layout>
             </div>
         );
