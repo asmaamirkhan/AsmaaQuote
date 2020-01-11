@@ -8,6 +8,7 @@ import AsmaaQuoteContent from './AsmaaQuoteContent';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
+
 const { Content, Footer } = Layout;
 
 class AsmaaQuoteMain extends Component {
@@ -15,7 +16,7 @@ class AsmaaQuoteMain extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            
         }
 
     }

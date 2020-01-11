@@ -5,7 +5,7 @@
 import React, { Component } from "react";
 import { Layout, Col, Row } from "antd";
 import AsmaaQuoteComponent from "./AsmaaQuoteComponent";
-import { db } from "../config";
+import { db } from "./firebase/config";
 
 import Data from "../temp/myquotes";
 
