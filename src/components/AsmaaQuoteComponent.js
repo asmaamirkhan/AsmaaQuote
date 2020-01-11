@@ -21,12 +21,12 @@ class AsmaaQuoteComponent extends Component {
         <Meta
           title={this.props.title}
           avatar={
-            <Icon type='star' style={{ fontSize: 45 }} />
+            <Icon type={this.props.category.icon} style={{ fontSize: 45, color: this.props.category.color }} />
           }
           description={
             <div>
               <spam>Category: </spam>
-              <Tag >{this.props.category}</Tag>
+              <Tag >{this.props.category.name}</Tag>
               
             </div>
           }

@@ -11,13 +11,23 @@ function App() {
           return (
             <Route
               path={"/" + item.name}
-              component={() => <AsmaaQuoteMain category={item.name} selected ={key} />}
+              component={() => (
+                <AsmaaQuoteMain category={item} selected={key} />
+              )}
             />
           );
         })}
-        
-        <Route path="/" component={() => <AsmaaQuoteMain category='MyQuotes' selected={0} />} />
-        <Route path="/About" component={() => <AsmaaQuoteMain category='MyQuotes' selected={Categories.size} />} />
+
+        <Route
+          path="/About"
+          component={() => (
+            <AsmaaQuoteMain category={Categories[0]} selected={Categories.length+1} />
+          )}
+        />
+        <Route
+          path="/"
+          component={() => <AsmaaQuoteMain category={Categories[0]} selected={0} />}
+        />
       </Switch>
     </Router>
   );

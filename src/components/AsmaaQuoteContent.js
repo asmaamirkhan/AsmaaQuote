@@ -28,7 +28,7 @@ class AsmaaQuoteContent extends Component {
   fetchData = () => {
     this.setState({quotes: []}, ()=>{
       db.collection("quotes")
-      .where("category", "==", this.props.category)
+      .where("category", "==", this.props.category.name)
       .get()
       .then(data => {
         data.forEach(item => {
@@ -58,7 +58,7 @@ class AsmaaQuoteContent extends Component {
               >
                 <AsmaaQuoteComponent
                   title={item.title}
-                  category={item.category}
+                  category={this.props.category}
                   quote={item.content}
                   author={item.author}
                 />

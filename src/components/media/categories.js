@@ -1,11 +1,20 @@
 module.exports = [
     {
-        'name': 'MyQuotes'
+        'name': 'MyQuotes',
+        'color': '#FFFFFF',
+        'icon': 'coffee',
+        'color': '#ff1a75'
     },
     {
-        'name': 'Life'
+        'name': 'Life',
+        'color': '#FFFFFF',
+        'icon': 'heart',
+        'color': '#c61aff'
     },
     {
-        'name': 'Motivation'
+        'name': 'Motivation',
+        'color': '#FFFFFF',
+        'icon': 'star',
+        'color': '#1890FF'
     }
  ];

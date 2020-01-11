@@ -28,6 +28,7 @@ class AsmaaQuoteMenu extends Component {
 
 
     render() {
+        console.log(Categories.length)
         return (
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
 
@@ -47,7 +48,7 @@ class AsmaaQuoteMenu extends Component {
                             return (<Menu.Item key={key}><Link to={'/' + item.name}> {item.name}</Link></Menu.Item>)
                         })
                     }
-                    <Menu.Item key={Categories.size}><Link to={'/About'}>About</Link></Menu.Item>
+                    <Menu.Item key={Categories.length+1}><Link to={'/About'}>About</Link></Menu.Item>
                 </Menu>
             </Header>
         );
