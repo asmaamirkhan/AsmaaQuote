@@ -5,6 +5,8 @@
 import React, { Component } from "react";
 import { Card, Divider, Tag, Icon } from "antd";
 
+import Colors from './media/card_colors';
+
 const { Meta } = Card;
 
 class AsmaaQuoteComponent extends Component {
@@ -15,7 +17,7 @@ class AsmaaQuoteComponent extends Component {
 
   render() {
     return (
-      <Card style={{ height: "100%" }}>
+      <Card style={{ height: "100%", background: Colors[Math.floor(Math.random() * Colors.length)] }}>
         <Meta
           title={this.props.title}
           avatar={
