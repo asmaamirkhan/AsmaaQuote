@@ -3,7 +3,8 @@
 */
 
 import React, { Component } from "react";
-import { Layout } from "antd";
+import { Layout, BackTop } from "antd";
+import { FaArrowCircleUp } from "react-icons/fa";
 import "antd/dist/antd.css";
 
 import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
@@ -20,6 +21,9 @@ class AsmaaQuoteMain extends Component {
       <div>
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
+          <BackTop>
+            <FaArrowCircleUp size="3em" color="#1890FF" />
+          </BackTop>
           <AsmaaQuoteContent category={this.props.category} />
           <AsmaaQuoteFooter />
         </Layout>
