@@ -34,9 +34,9 @@ class AsmaaQuoteMenu extends Component {
     console.log(Categories.length);
     return (
       <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-        <a href="https://github.com/asmaamirkhan/AsmaaQuote" target="_blank">
+        <Link to={"/"}>
           <img alt="AsmaaQuoteLogo" src={Logo} style={{ height: "40px" }} />
-        </a>
+        </Link>
 
         <Menu
           theme="dark"
