@@ -2,13 +2,13 @@
   author: Asmaa Mirkhan ~ 2019
 */
 
-import React, { Component } from 'react';
-import { Layout } from 'antd';
-import 'antd/dist/antd.css';
+import React, { Component } from "react";
+import { Layout } from "antd";
+import "antd/dist/antd.css";
 
-import AsmaaQuoteMenu from './AsmaaQuoteMenu';
-import AsmaaQuoteContent from './AsmaaQuoteContent';
-import AsmaaQuoteFooter from './AsmaaQuoteFooter';
+import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
+import AsmaaQuoteContent from "./AsmaaQuoteContent";
+import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
 
 class AsmaaQuoteMain extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class AsmaaQuoteMain extends Component {
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
           <AsmaaQuoteContent category={this.props.category} />
-          <AsmaaQuoteFooter/>
+          <AsmaaQuoteFooter />
         </Layout>
       </div>
     );
