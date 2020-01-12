@@ -3,13 +3,12 @@
 */
 
 import React, { Component } from 'react';
-import AsmaaQuoteMenu from './AsmaaQuoteMenu';
-import AsmaaQuoteContent from './AsmaaQuoteContent';
-import AsmaaQuoteFooter from './AsmaaQuoteFooter';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
-const { Footer } = Layout;
+import AsmaaQuoteMenu from './AsmaaQuoteMenu';
+import AsmaaQuoteContent from './AsmaaQuoteContent';
+import AsmaaQuoteFooter from './AsmaaQuoteFooter';
 
 class AsmaaQuoteMain extends Component {
   constructor(props) {
@@ -22,7 +21,7 @@ class AsmaaQuoteMain extends Component {
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
           <AsmaaQuoteContent category={this.props.category} />
-          
+          <AsmaaQuoteFooter/>
         </Layout>
       </div>
     );
