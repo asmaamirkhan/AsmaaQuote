@@ -29,7 +29,7 @@ class AsmaaQuoteComponent extends Component {
           description={
             <div>
               <spam>Category: </spam>
-              <Tag>{this.props.category.name}</Tag>
+              <Tag color={this.props.category.tagColor}>{this.props.category.name}</Tag>
             </div>
           }
         />
