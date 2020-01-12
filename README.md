@@ -11,8 +11,9 @@ My own quote manager ✨
 - [X] MVP 🎉
 - [X] Linking to Firebase 🔥
 - [X] Fixing some routing issues 🐛
+- [X] Progressive web app 🚀 
 - [ ] Preparing configuration doc 📚
-- [ ] Multi language support
+- [ ] Multi language support 🔤
 
 ## 💼 Contact
 Find me on [LinkedIn](https://www.linkedin.com/in/asmaamirkhan/) and feel free to mail me, [Asmaa 🦋](mailto:asmaamirkhan.am@gmail.com)
