@@ -4,7 +4,6 @@
 
 import React, { Component } from "react";
 import { Layout, Menu, Drawer, Button, Icon } from "antd";
-import "antd/dist/antd.css";
 import Categories from "./media/categories";
 import Logo from "./media/AsmaaQuoteLogo.png";
 import { Link } from "react-router-dom";
