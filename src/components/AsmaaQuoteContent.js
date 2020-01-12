@@ -37,11 +37,19 @@ class AsmaaQuoteContent extends Component {
     });
   };
 
+  shuffleQuotes = quotes => {
+    for (let i = quotes.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [quotes[i], quotes[j]] = [quotes[j], quotes[i]];
+    }
+    return quotes;
+  };
+
   render() {
     return (
       <Content style={{ padding: "10px 25px", marginTop: 64 }}>
         <Row gutter={12} type="flex">
-          {this.state.quotes.map((item, key) => {
+          {this.shuffleQuotes(this.state.quotes).map((item, key) => {
             return (
               <Col
                 xs={24}
