@@ -12,6 +12,7 @@ My own quote manager ✨
 - [X] Linking to Firebase 🔥
 - [X] Fixing some routing issues 🐛
 - [X] Progressive web app 🚀 
+- [ ] Notifying user about PWA 👮‍♀️
 - [ ] Preparing configuration doc 📚
 - [ ] Multi language support 🔤
 
