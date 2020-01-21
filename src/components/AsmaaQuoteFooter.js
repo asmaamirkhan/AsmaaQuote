@@ -15,7 +15,7 @@ class AsmaaQuoteFooter extends Component {
   render() {
     return (
       <Footer style={{ textAlign: "center" }}>
-        AsmaaQuote Project ©2019 Made with ❤ by{" "}
+        AsmaaQuote Project ©2019 Made with 💖 by {" "}
         <a href="https://www.linkedin.com/in/asmaamirkhan/" target="_blank">
           Asmaa Mirkhan
         </a>
