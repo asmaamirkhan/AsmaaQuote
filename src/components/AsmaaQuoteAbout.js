@@ -30,16 +30,16 @@ class ComponentTemplate extends Component {
               <FaArrowCircleUp size="3em" color="#1890FF" />
             </BackTop>
 
-            <Row gutter={12} type="flex">
+            <Row gutter={12} type="flex" >
               <Col
                 xs={24}
                 sm={6}
                 md={6}
                 lg={6}
                 xl={6}
-                style={{ marginTop: 16 }}
+                style={{ marginTop: 16, display: 'flex' }}
               >
-                <img alt="image" src={Logo} style={{ height: "100px" }} />
+                <img alt="image" src={Logo} style={{ height: "100px", margin: 'auto' }} />
               </Col>
 
               <Col
@@ -69,7 +69,7 @@ class ComponentTemplate extends Component {
                 md={6}
                 lg={6}
                 xl={6}
-                style={{ marginTop: 16 }}
+                style={{ marginTop: 16, display: 'flex' }}
               >
                 <GiButterfly
                   size="6em"
@@ -78,7 +78,8 @@ class ComponentTemplate extends Component {
                     border: "2px solid #FF9C08",
                     borderRadius: "50px",
                     padding: "20px",
-                    background: "#FF9C08"
+                    background: "#FF9C08",
+                    margin: 'auto'
                   }}
                 />
               </Col>
@@ -110,7 +111,7 @@ class ComponentTemplate extends Component {
                 md={6}
                 lg={6}
                 xl={6}
-                style={{ marginTop: 16 }}
+                style={{ marginTop: 16, display: 'flex' }}
               >
                 <FaCode
                   size="6em"
@@ -119,7 +120,8 @@ class ComponentTemplate extends Component {
                     border: "2px solid #131E66",
                     borderRadius: "50px",
                     padding: "20px",
-                    background: "#131E66"
+                    background: "#131E66",
+                    margin: 'auto'
                   }}
                 />
               </Col>
