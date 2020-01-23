@@ -64,7 +64,12 @@ class AsmaaQuoteMenu extends Component {
           style={{ float: "right" }}
           id="togglemenu"
         >
-          <Button className="barsMenu" type="default" onClick={this.showDrawer}>
+          <Button
+            className="barsMenu"
+            type="default"
+            onClick={this.showDrawer}
+            style={{ verticalAlign: "bottom" }}
+          >
             <Icon type="align-center" />
           </Button>
         </Menu>
