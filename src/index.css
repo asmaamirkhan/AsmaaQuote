@@ -33,4 +33,8 @@ screen and (max-height:500px) {
   #togglemenu {
       display: inline !important;
   }
+  #about_content{
+    padding: 50px 20px !important
+  }
 }
+

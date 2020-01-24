@@ -25,7 +25,7 @@ class ComponentTemplate extends Component {
       <div>
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
-          <Content style={{ padding: "50px 75px", marginTop: 64 }}>
+          <Content id="about_content" style={{ padding: "50px 75px", marginTop: 64 }}>
             <BackTop>
               <FaArrowCircleUp size="3em" color="#1890FF" />
             </BackTop>
