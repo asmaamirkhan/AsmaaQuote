@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "581fa80c28ef156d6d4c0649ef567fac",
+    "revision": "acd5cab0516f6df1e6aa5d66d1a992b8",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.35f98baf.chunk.css"
   },
   {
-    "revision": "ccabd267ffb7e35aaabe",
+    "revision": "d57787856a427d957f6a",
     "url": "/static/css/main.9728d1da.chunk.css"
   },
   {
@@ -20,15 +20,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.4b3033ed.chunk.js.LICENSE"
   },
   {
-    "revision": "ccabd267ffb7e35aaabe",
-    "url": "/static/js/main.618d5188.chunk.js"
+    "revision": "d57787856a427d957f6a",
+    "url": "/static/js/main.5a59938a.chunk.js"
   },
   {
     "revision": "82c0a94bc96239f33409",
     "url": "/static/js/runtime-main.d4c54b08.js"
-  },
-  {
-    "revision": "ddc725ed2ffe5adf3549e1b2af79bcc4",
-    "url": "/static/media/AsmaaQuoteLogo.ddc725ed.png"
   }
 ]);
