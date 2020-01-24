@@ -8,7 +8,7 @@ import { FaArrowCircleUp, FaCode } from "react-icons/fa";
 import { GiButterfly } from "react-icons/gi";
 import ReactMarkdown from "react-markdown";
 
-import Logo from "./media/AsmaaQuoteLogo.png";
+import Logo from "./media/AsmaaQuoteLogo100px.png";
 import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
 import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
 import AboutStrings from "./media/AsmaaQuoteAboutStrings";
