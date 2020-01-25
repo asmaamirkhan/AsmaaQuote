@@ -54,7 +54,7 @@ class AsmaaQuoteContent extends Component {
   render() {
     return (
       <Content style={{ padding: "10px 25px", marginTop: 64 }}>
-        <Divider>
+        <Divider orientation = "right">
           <Switch
             checkedChildren="Sort 👩‍⚖️"
             unCheckedChildren="Shuffle 🤹‍♀️"
