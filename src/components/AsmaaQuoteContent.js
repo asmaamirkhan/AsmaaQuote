@@ -3,7 +3,7 @@
 */
 
 import React, { Component } from "react";
-import { Layout, Col, Row } from "antd";
+import { Layout, Col, Row, Switch, Divider } from "antd";
 import AsmaaQuoteComponent from "./AsmaaQuoteComponent";
 import { db } from "./firebase/config";
 
@@ -37,6 +37,12 @@ class AsmaaQuoteContent extends Component {
     });
   };
 
+  toggleSwitch = (checked, e) => {
+    if (checked)
+      this.setState({ quotes: this.shuffleQuotes(this.state.quotes) });
+    else this.fetchData();
+  };
+
   shuffleQuotes = quotes => {
     for (let i = quotes.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -48,8 +54,15 @@ class AsmaaQuoteContent extends Component {
   render() {
     return (
       <Content style={{ padding: "10px 25px", marginTop: 64 }}>
+        <Divider>
+          <Switch
+            checkedChildren="Sort 👩‍⚖️"
+            unCheckedChildren="Shuffle 🤹‍♀️"
+            onClick={this.toggleSwitch}
+          />
+        </Divider>
         <Row gutter={12} type="flex">
-          {this.shuffleQuotes(this.state.quotes).map((item, key) => {
+          {this.state.quotes.map((item, key) => {
             return (
               <Col
                 xs={24}
