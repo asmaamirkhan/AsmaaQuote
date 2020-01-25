@@ -24,6 +24,7 @@ class AsmaaQuoteContent extends Component {
   fetchData = () => {
     this.setState({ quotes: [] }, () => {
       db.collection("quotes")
+        .orderBy("date", "desc")
         .where("category", "==", this.props.category.name)
         .get()
         .then(data => {
@@ -54,7 +55,7 @@ class AsmaaQuoteContent extends Component {
   render() {
     return (
       <Content style={{ padding: "10px 25px", marginTop: 64 }}>
-        <Divider orientation = "right" style={{color: "#000000"}}>
+        <Divider orientation="right" style={{ color: "#000000" }}>
           <Switch
             checkedChildren="Sort 👩‍⚖️"
             unCheckedChildren="Shuffle 🤹‍♀️"
