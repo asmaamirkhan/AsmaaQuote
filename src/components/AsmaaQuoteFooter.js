@@ -8,9 +8,6 @@ import { Layout } from 'antd';
 const { Footer } = Layout;
 
 class AsmaaQuoteFooter extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

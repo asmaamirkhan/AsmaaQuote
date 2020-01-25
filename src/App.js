@@ -3,7 +3,7 @@
 */
 
 import React from "react";
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Categories from "./components/media/categories";
 import AsmaaQuoteMain from "./components/AsmaaQuoteMain";
 import AsmaaQuoteAbout from "./components/AsmaaQuoteAbout";

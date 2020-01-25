@@ -12,9 +12,6 @@ import AsmaaQuoteContent from "./AsmaaQuoteContent";
 import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
 
 class AsmaaQuoteMain extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

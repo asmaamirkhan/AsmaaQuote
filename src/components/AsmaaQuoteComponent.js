@@ -10,9 +10,6 @@ import Colors from "./media/card_colors";
 const { Meta } = Card;
 
 class AsmaaQuoteComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   generateRandom = () => {
     return Math.floor(Math.random() * Colors.length);
