@@ -57,7 +57,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutProjectQuestion}
                   bordered={true}
-                  style={{ background: "#f8ecf8" }}
+                  style={{ background: "#f2e6ff" }}
                 >
                   <p>
                     <ReactMarkdown source={AboutStrings.AboutProject} />
@@ -99,7 +99,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutAsmaaQuestion}
                   bordered={true}
-                  style={{ background: "#faeeea" }}
+                  style={{ background: "#ffe4f1" }}
                 >
                   <p>
                     <ReactMarkdown source={AboutStrings.AboutAsmaa} />
@@ -141,7 +141,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutProjectTechnicalQuestion}
                   bordered={true}
-                  style={{ background: "#ecf8f6" }}
+                  style={{ background: "#e2f1ff" }}
                 >
                   <p>
                     <ReactMarkdown
