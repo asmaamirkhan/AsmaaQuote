@@ -22,7 +22,7 @@ class AsmaaQuoteMain extends Component {
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
           <BackTop>
-            <FaArrowCircleUp size="3em" color="#1890FF" />
+            <FaArrowCircleUp size="3em" color="#560027" />
           </BackTop>
           <AsmaaQuoteContent category={this.props.category} />
           <AsmaaQuoteFooter />
