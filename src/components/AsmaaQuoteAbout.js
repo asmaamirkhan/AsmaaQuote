@@ -3,7 +3,7 @@
 */
 
 import React, { Component } from "react";
-import { Layout, Row, Col, BackTop, Card } from "antd";
+import { Layout, Row, Col, BackTop, Card, Divider } from "antd";
 import { FaArrowCircleUp, FaCode } from "react-icons/fa";
 import { GiButterfly } from "react-icons/gi";
 import ReactMarkdown from "react-markdown";
@@ -16,13 +16,15 @@ import AboutStrings from "./media/AsmaaQuoteAboutStrings";
 const { Content } = Layout;
 
 class ComponentTemplate extends Component {
-
   render() {
     return (
       <div>
         <Layout className="layout">
           <AsmaaQuoteMenu selected={this.props.selected} />
-          <Content id="about_content" style={{ padding: "50px 75px", marginTop: 64 }}>
+          <Content
+            id="about_content"
+            style={{ padding: "50px 75px", marginTop: 64 }}
+          >
             <BackTop>
               <FaArrowCircleUp size="3em" color="#1890FF" />
             </BackTop>
@@ -54,7 +56,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutProjectQuestion}
                   bordered={true}
-                  style={{ background: "#f2e6ff" }}
+                  style={{ background: "#f2e6ff", border: "2px solid #e7cfff" }}
                 >
                   <p>
                     <ReactMarkdown source={AboutStrings.AboutProject} />
@@ -96,7 +98,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutAsmaaQuestion}
                   bordered={true}
-                  style={{ background: "#ffe4f1" }}
+                  style={{ background: "#ffe4f1", border: "2px solid #ffcce5" }}
                 >
                   <p>
                     <ReactMarkdown source={AboutStrings.AboutAsmaa} />
@@ -138,7 +140,7 @@ class ComponentTemplate extends Component {
                 <Card
                   title={AboutStrings.AboutProjectTechnicalQuestion}
                   bordered={true}
-                  style={{ background: "#e2f1ff" }}
+                  style={{ background: "#e2f1ff", border: "2px solid #cde9ff" }}
                 >
                   <p>
                     <ReactMarkdown
