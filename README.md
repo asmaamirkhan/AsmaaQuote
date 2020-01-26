@@ -3,18 +3,18 @@ My own quote manager ✨
 - [Go live 🚀](https://asmaamir.com/)
 
 ## ⚙ Platforms
-* ReactJS ⚛
-* AntDesign 🐜
-* Firebase 🔥
+* ⚛ ReactJS 
+* 🐜 AntDesign 
+* 🔥 Firebase 
 
 ## ⏰ Todo
-- [X] MVP 🎉
-- [X] Linking to Firebase 🔥
-- [X] Fixing some routing issues 🐛
-- [X] Progressive web app 🚀 
-- [ ] Notifying user about PWA 👮‍♀️
-- [ ] Preparing configuration doc 📚
-- [ ] Multi language support 🔤
+- [X] 🎉 MVP 
+- [X] 🔥 Linking to Firebase 
+- [X] 🐛 Fixing some routing issues 
+- [X] 🚀 Progressive web app  
+- [ ] 💡 Notifying user about PWA 
+- [ ] 📚 Preparing configuration doc 
+- [ ] 🔤 Multi language support 
 
 ## 👩‍🚀 Useful Links
 - [🎨 Antd color customization](https://www.youtube.com/watch?v=m96DTtTpGpA)
