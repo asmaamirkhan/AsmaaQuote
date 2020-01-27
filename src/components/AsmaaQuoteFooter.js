@@ -14,14 +14,16 @@ class AsmaaQuoteFooter extends Component {
         <a
           href="https://github.com/asmaamirkhan/AsmaaQuote"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ color: "#560027" }}
         >
-          🦋 AsmaaQuote Project {" "}
+          <span role="img" aria-label="butterfly">🦋</span> AsmaaQuote Project {" "}
         </a>
-         ©2020 Made with 💖 by {" "}
+         ©2020 Made with <span role="img" aria-label="heart">💖</span> by {" "}
         <a
           href="https://www.linkedin.com/in/asmaamirkhan/"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ color: "#560027" }}
         >
           Asmaa Mirkhan

@@ -3,7 +3,7 @@
 */
 
 import React, { Component } from "react";
-import { Layout, Row, Col, BackTop, Card, Divider } from "antd";
+import { Layout, Row, Col, BackTop, Card } from "antd";
 import { FaArrowCircleUp, FaCode } from "react-icons/fa";
 import { GiButterfly } from "react-icons/gi";
 import ReactMarkdown from "react-markdown";
@@ -39,7 +39,7 @@ class ComponentTemplate extends Component {
                 style={{ marginTop: 16, display: "flex" }}
               >
                 <img
-                  alt="image"
+                  alt="AsmaaQuote Logo"
                   src={Logo}
                   style={{ height: "100px", margin: "auto" }}
                 />
