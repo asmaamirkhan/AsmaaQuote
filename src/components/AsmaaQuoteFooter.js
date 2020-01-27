@@ -3,17 +3,27 @@
 */
 
 import React, { Component } from "react";
-import { Layout } from 'antd';
+import { Layout } from "antd";
 
 const { Footer } = Layout;
 
 class AsmaaQuoteFooter extends Component {
-
   render() {
     return (
       <Footer style={{ textAlign: "center" }}>
-        AsmaaQuote Project ©2019 Made with 💖 by {" "}
-        <a href="https://www.linkedin.com/in/asmaamirkhan/" target="_blank" style={{color: '#560027'}}>
+        <a
+          href="https://github.com/asmaamirkhan/AsmaaQuote"
+          target="_blank"
+          style={{ color: "#560027" }}
+        >
+          🦋 AsmaaQuote Project {" "}
+        </a>
+         ©2020 Made with 💖 by {" "}
+        <a
+          href="https://www.linkedin.com/in/asmaamirkhan/"
+          target="_blank"
+          style={{ color: "#560027" }}
+        >
           Asmaa Mirkhan
         </a>
       </Footer>
