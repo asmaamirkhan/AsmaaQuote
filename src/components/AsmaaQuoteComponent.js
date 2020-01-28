@@ -3,11 +3,12 @@
 */
 
 import React, { Component } from "react";
-import { Card, Divider, Tag, Icon } from "antd";
+import { Card, Divider, Tag, Icon, Typography } from "antd";
 
 import Colors from "./media/card_colors";
 
 const { Meta } = Card;
+const { Text } = Typography;
 
 class AsmaaQuoteComponent extends Component {
 
@@ -48,7 +49,7 @@ class AsmaaQuoteComponent extends Component {
         <Divider
           style={{ background: Colors[colorIndex].border, height: "2px" }}
         />
-        <p style={{ fontSize: "large" }}>{this.props.quote}</p>
+        <Text style={{ fontSize: "medium" }}>{this.props.quote}</Text>
         <Divider
           style={{
             fontSize: "x-small"
