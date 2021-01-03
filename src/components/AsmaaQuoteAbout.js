@@ -16,6 +16,7 @@ import AboutStrings from "./media/AsmaaQuoteAboutStrings";
 const { Content } = Layout;
 
 class AsmaaQuoteAbout extends Component {
+
   render() {
     return (
       <div>
