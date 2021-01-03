@@ -26,7 +26,7 @@ class AsmaaQuoteAbout extends Component {
             style={{ padding: "50px 75px", marginTop: 64 }}
           >
             <BackTop>
-              <FaArrowCircleUp size="3em" color="#1890FF" />
+              <FaArrowCircleUp size="3em" color="#560027" />
             </BackTop>
 
             <Row gutter={12} type="flex">

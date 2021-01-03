@@ -10,6 +10,7 @@ import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
 import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
 import { db } from "./firebase/config";
 import Firebase from 'firebase';
+import { SyncOutlined } from '@ant-design/icons';
 
 const { Content } = Layout;
 const storage = Firebase.storage().ref();
@@ -18,6 +19,7 @@ class AsmaaQuoteGallery extends Component {
   constructor() {
     super()
     this.state = {
+      showLoadingBar: "block",
       urls: []
     }
   }
@@ -38,7 +40,10 @@ class AsmaaQuoteGallery extends Component {
             obj["url"] = url;
             urls = [...urls, obj]
             if (data.size === urls.length) {
-              this.setState({ urls: urls.sort((a, b) => (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0)) })
+              this.setState({
+                showLoadingBar: "none",
+                urls: urls.sort((a, b) => (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0))
+              })
             }
           }).catch((error) => {
             console.log(error);
@@ -80,9 +85,9 @@ class AsmaaQuoteGallery extends Component {
               />
             </Divider>
             <BackTop>
-              <FaArrowCircleUp size="3em" color="#1890FF" />
+              <FaArrowCircleUp size="3em" color="#560027" />
             </BackTop>
-
+            <SyncOutlined spin style={{ display: this.state.showLoadingBar, fontSize: 50, color: "#560027" }} />
             <Row gutter={12} type="flex">
               {
                 this.state.urls.map((item, key) => {
