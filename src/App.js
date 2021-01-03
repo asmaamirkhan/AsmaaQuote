@@ -7,6 +7,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Categories from "./components/media/categories";
 import AsmaaQuoteMain from "./components/AsmaaQuoteMain";
 import AsmaaQuoteAbout from "./components/AsmaaQuoteAbout";
+import AsmaaQuoteGallery from "./components/AsmaaQuoteGallery";
 
 function App() {
   return (
@@ -22,13 +23,21 @@ function App() {
             />
           );
         })}
-
+        <Route
+          path="/Gallery"
+          component={() => (
+            <AsmaaQuoteGallery
+              category={Categories.length + 1}
+              selected={Categories.length + 1}
+            />
+          )}
+        />
         <Route
           path="/About"
           component={() => (
             <AsmaaQuoteAbout
-              category={Categories.length + 1}
-              selected={Categories.length + 1}
+              category={Categories.length + 2}
+              selected={Categories.length + 2}
             />
           )}
         />
