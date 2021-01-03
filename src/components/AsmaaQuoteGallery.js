@@ -3,8 +3,8 @@
 */
 
 import React, { Component } from "react";
-import { Layout, Row, Col, BackTop, Card, Image, Divider, Switch } from "antd";
-import { FaArrowCircleUp, FaCode } from "react-icons/fa";
+import { Layout, Row, Col, BackTop, Image, Divider, Switch } from "antd";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
 import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
@@ -12,7 +12,6 @@ import { db } from "./firebase/config";
 import Firebase from 'firebase';
 
 const { Content } = Layout;
-const { Meta } = Card;
 const storage = Firebase.storage().ref();
 
 class AsmaaQuoteGallery extends Component {
@@ -38,7 +37,7 @@ class AsmaaQuoteGallery extends Component {
           storage.child(`quotephoto/${item.data()["filename"]}`).getDownloadURL().then((url) => {
             obj["url"] = url;
             urls = [...urls, obj]
-            if (data.size == urls.length) {
+            if (data.size === urls.length) {
               this.setState({ urls: urls.sort((a, b) => (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0)) })
             }
           }).catch((error) => {

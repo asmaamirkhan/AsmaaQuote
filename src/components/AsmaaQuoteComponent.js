@@ -3,8 +3,8 @@
 */
 
 import React, { Component } from "react";
-import { Card, Divider, Tag, Icon, Typography } from "antd";
-
+import { Card, Divider, Tag, Typography } from "antd";
+import { StarOutlined, HeartOutlined, CoffeeOutlined, MessageOutlined } from '@ant-design/icons';
 import Colors from "./media/card_colors";
 
 const { Meta } = Card;
@@ -17,7 +17,22 @@ class AsmaaQuoteComponent extends Component {
     //this.setState({colorIndex: color })
   };
 
+  chooseIcon = (name, color) => {
+    let iconStyle = { fontSize: 45, color: color }
+    switch (name) {
+      case "coffee":
+        return <CoffeeOutlined style={iconStyle} />
+      case "star":
+        return <StarOutlined style={iconStyle} />
+      case "heart":
+        return <HeartOutlined style={iconStyle} />
+      default:
+        return <MessageOutlined style={iconStyle} />
+    }
+  }
+
   render() {
+
     var colorIndex = this.generateRandom();
     return (
       <Card
@@ -31,10 +46,7 @@ class AsmaaQuoteComponent extends Component {
         <Meta
           title={this.props.title}
           avatar={
-            <Icon
-              type={this.props.category.icon}
-              style={{ fontSize: 45, color: this.props.category.color }}
-            />
+            this.chooseIcon(this.props.category.icon, this.props.category.color)
           }
           description={
             <div>

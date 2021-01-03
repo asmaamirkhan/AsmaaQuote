@@ -17,6 +17,6 @@ const Categories = [
         'color': '#1890FF',
         'tagColor': 'blue'
     }
- ];
+];
 
- export default Categories;
+export default Categories;

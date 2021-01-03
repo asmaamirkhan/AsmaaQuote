@@ -3,10 +3,11 @@
 */
 
 import React, { Component } from "react";
-import { Layout, Menu, Drawer, Button, Icon } from "antd";
+import { Layout, Menu, Drawer, Button } from "antd";
 import Categories from "./media/categories";
 import Logo from "./media/AsmaaQuoteLogo.png";
 import { Link } from "react-router-dom";
+import { AlignCenterOutlined } from '@ant-design/icons';
 
 const { Header } = Layout;
 
@@ -70,9 +71,9 @@ class AsmaaQuoteMenu extends Component {
             className="barsMenu"
             type="default"
             onClick={this.showDrawer}
-            style={{ verticalAlign: "bottom" }}
+            style={{ verticalAlign: "center" }}
           >
-            <Icon type="align-center" />
+            <AlignCenterOutlined />
           </Button>
         </Menu>
 
