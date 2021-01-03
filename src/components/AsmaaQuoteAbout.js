@@ -15,7 +15,7 @@ import AboutStrings from "./media/AsmaaQuoteAboutStrings";
 
 const { Content } = Layout;
 
-class ComponentTemplate extends Component {
+class AsmaaQuoteAbout extends Component {
   render() {
     return (
       <div>
@@ -158,4 +158,4 @@ class ComponentTemplate extends Component {
   }
 }
 
-export default ComponentTemplate;
+export default AsmaaQuoteAbout;
