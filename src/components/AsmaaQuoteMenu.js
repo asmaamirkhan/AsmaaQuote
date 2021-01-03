@@ -93,6 +93,9 @@ class AsmaaQuoteMenu extends Component {
                 </Link>
               );
             })}
+            <Link to="/Gallery" onClick={this.onClose}>
+              <p>Gallery</p>
+            </Link>
             <Link to="/About" onClick={this.onClose}>
               <p>About</p>
             </Link>
