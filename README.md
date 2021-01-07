@@ -2,22 +2,24 @@
 My own quote manager ✨
 - [Go live 🚀](https://asmaamir.com/)
 
-## ⚙ Platforms
+## 🚀 Technologies
 * ⚛ ReactJS 
 * 🐜 AntDesign 
 * 🔥 Firebase 
 
-## ⏰ Todo
-- [X] 🎉 MVP 
-- [X] 🔥 Linking to Firebase 
-- [X] 🐛 Fixing some routing issues 
-- [X] 🚀 Progressive web app  
-- [ ] 💡 Notifying user about PWA 
-- [ ] 📚 Preparing configuration doc 
-- [ ] 🔤 Multi language support 
 
-## 👩‍🚀 Useful Links
+
+## 👩‍🚀 About PWA 
+This project has progressive web app 🎉, you can use it as desktop and mobile app 🚀
+
+### 👩‍🏫 How to use?
+
+![](./doc/settings.jpg)
+
+![](./doc/home.jpg)
+
+## 🔗 Useful Links
 - [🎨 Antd color customization](https://www.youtube.com/watch?v=m96DTtTpGpA)
 
-## 💼 Contact
+## 💼 Contact & Support
 Find me on [LinkedIn](https://www.linkedin.com/in/asmaamirkhan/) and feel free to mail me, [Asmaa 🦋](mailto:asmaamirkhan.am@gmail.com)
