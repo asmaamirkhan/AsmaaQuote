@@ -79,7 +79,7 @@ class AsmaaQuoteGallery extends Component {
           >
             <Divider orientation="right" style={{ color: "#000000" }}>
               <Switch
-                checkedChildren="Sort 👩‍⚖️"
+                checkedChildren="Shuffle 🤹‍♀️"
                 unCheckedChildren="Shuffle 🤹‍♀️"
                 onClick={this.toggleSwitch}
               />
