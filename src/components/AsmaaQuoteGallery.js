@@ -68,7 +68,6 @@ class AsmaaQuoteGallery extends Component {
     return urls;
   };
   render() {
-    console.log("r")
     return (
       <div>
         <Layout className="layout">

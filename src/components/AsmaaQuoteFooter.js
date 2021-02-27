@@ -19,7 +19,7 @@ class AsmaaQuoteFooter extends Component {
         >
           <span role="img" aria-label="butterfly">🦋</span> AsmaaQuote Project {" "}
         </a>
-         ©2020 Made with <span role="img" aria-label="heart">💖</span> by {" "}
+         ©2021 Made with <span role="img" aria-label="heart">💖</span> by {" "}
         <a
           href="https://www.linkedin.com/in/asmaamirkhan/"
           target="_blank"

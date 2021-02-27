@@ -20,7 +20,7 @@ const AboutStrings = {
   * 🦋 In love with challenges and butterflies
   * 💦 Can fit in any cup like water
   * 🍕 Hungry for knowledge and have passion in learning new things continuously
-  * 🤓 Developing my self as a HUMAN is my top priority believing that making the world a better place to live starts from individuals
+  * 🧐 Developing my self as a HUMAN is my top priority believing that making the world a better place to live starts from individuals
   * 🌺 Searching about beauty by inspecting details believing that it is reserved in them`,
   AboutAsmaaQuestionTech: "Want to know more technically about me? 👩‍💻",
   AboutAsmaaTech:
