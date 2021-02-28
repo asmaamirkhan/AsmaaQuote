@@ -56,6 +56,9 @@ class AsmaaQuoteMenu extends Component {
             <Link to={"/Gallery"}>Gallery</Link>
           </Menu.Item>
           <Menu.Item key={Categories.length + 2}>
+            <Link to={"/Khawater"}>Khawater</Link>
+          </Menu.Item>
+          <Menu.Item key={Categories.length + 3}>
             <Link to={"/About"}>About</Link>
           </Menu.Item>
         </Menu>
@@ -95,6 +98,9 @@ class AsmaaQuoteMenu extends Component {
             })}
             <Link to="/Gallery" onClick={this.onClose}>
               <p>Gallery</p>
+            </Link>
+            <Link to="/Khawater" onClick={this.onClose}>
+              <p>Khawater</p>
             </Link>
             <Link to="/About" onClick={this.onClose}>
               <p>About</p>

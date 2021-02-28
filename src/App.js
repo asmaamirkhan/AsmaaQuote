@@ -8,6 +8,7 @@ import Categories from "./components/media/categories";
 import AsmaaQuoteMain from "./components/AsmaaQuoteMain";
 import AsmaaQuoteAbout from "./components/AsmaaQuoteAbout";
 import AsmaaQuoteGallery from "./components/AsmaaQuoteGallery";
+import AsmaaQuoteKhawater from "./components/AsmaaQuoteKhawater";
 
 function App() {
   return (
@@ -33,11 +34,20 @@ function App() {
           )}
         />
         <Route
+          path="/Khawater"
+          component={() => (
+            <AsmaaQuoteKhawater
+              category={Categories.length + 2}
+              selected={Categories.length + 2}
+            />
+          )}
+        />
+        <Route
           path="/About"
           component={() => (
             <AsmaaQuoteAbout
-              category={Categories.length + 2}
-              selected={Categories.length + 2}
+              category={Categories.length + 3}
+              selected={Categories.length + 3}
             />
           )}
         />
