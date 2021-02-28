@@ -10,8 +10,6 @@ import { HeartOutlined, TranslationOutlined } from '@ant-design/icons';
 import AsmaaQuoteMenu from "./AsmaaQuoteMenu";
 import AsmaaQuoteFooter from "./AsmaaQuoteFooter";
 import { db } from "./firebase/config";
-import Firebase from 'firebase';
-import Colors from "./media/card_colors";
 
 const { Content } = Layout;
 const { TabPane } = Tabs;
@@ -20,14 +18,9 @@ class AsmaaQuoteKhawater extends Component {
     constructor() {
         super()
         this.state = {
-            showLoadingBar: "block",
             quotes: []
         }
     }
-    generateRandom = () => {
-        return Math.floor(Math.random() * Colors.length);
-        //this.setState({colorIndex: color })
-    };
     componentDidMount() {
         this.fetchData();
     }
