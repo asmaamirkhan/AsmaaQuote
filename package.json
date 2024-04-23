@@ -16,7 +16,7 @@
     "customize-cra": "^0.9.1",
     "dotenv": "^8.2.0",
     "firebase": "^7.24.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^5.0.0",
     "less": "^3.13.1",
     "less-loader": "^5.0.0",
     "react": "^16.14.0",
